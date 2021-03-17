@@ -1,31 +1,19 @@
+$(document).ready(_ => {
+    $nav = $('.nav');
+    $toggleCollapse = $('.toggle-collapse');
 
-  $(function () {
-
-    // MENU
-    $('.navbar-collapse a').on('click',function(){
-      $(".navbar-collapse").collapse('hide');
+    // Fazer menu para telas < 750px; evento clique
+    $toggleCollapse.click(_ => {
+        $nav.toggleClass('collapse');
     });
 
-    // AOS ANIMATION
-    AOS.init({
-      disable: 'mobile',
-      duration: 800,
-      anchorPlacement: 'center-bottom'
+    // clicar para ir ao topo
+    $('.move-up span').click(_ => {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 2000);
     });
 
-
-    // SMOOTHSCROLL NAVBAR
-    $(function() {
-      $('.navbar a, .hero-text a').on('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 49
-        }, 1000);
-        event.preventDefault();
-      });
-    });    
-  });
-
-
-    
-
+    // animações
+    AOS.init();
+});
