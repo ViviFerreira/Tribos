@@ -1,4 +1,4 @@
-# 🏔️ *Tribos*
+# 🏔️__*Tribos*__
 ## A Tribos é uma plataforma web responsiva criada com o propósito de unir pessoas!
 ### 💡 _Ideia por trás da criação da Tribos_
 ###### O foco inicial é unir as pessoas fisicamente por meio da aplicação em quaisquer atividades, como prática de esportes, trilhas em parques ecológicos, visitas a museus, ingressão em palestras, idas a shows, igrejas, restaurantes...
