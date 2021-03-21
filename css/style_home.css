@@ -87,6 +87,8 @@ h3 {
   font-weight: var(--font-weight-bold);
   letter-spacing: -1px;
   margin: 0;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }
 
 h4 {
@@ -110,7 +112,12 @@ p {
   font-weight: var(--font-weight-light);
   line-height: 1.5em;
 }
-
+#resumo, #plataforma{
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5em;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -273,6 +280,15 @@ ul {
   text-align: center;
 }
 
+.banner{
+  background-image: url('../img/banner.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  min-height: 100vh;
+  position: relative;
+}
 .bg-main {
   background: var(--dark-color);
   position: absolute;
@@ -285,15 +301,6 @@ ul {
   opacity: 0.80;
 }
 
-.banner{
-  background-image: url('../img/banner.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  min-height: 100vh;
-  position: relative;
-}
 
 .site-title .site-background{
   padding-top: 15rem;
@@ -336,8 +343,13 @@ ul {
   border: 1px solid var(--tamy);
   color: var(--tamy);
 }
-.move-main{
-  margin-top: 5em;
+.aboutTribos{
+  width: 100%;
+  position: absolute;
+  background-color: #FDFEFE;
+  text-align: center;
+  height: 50vh;
+
 }
 /* Responsividade*/
 
@@ -353,5 +365,10 @@ ul {
 }
 
 @media screen and (max-width: 400px){
-  
+  .aboutTribos {
+    text-align: justify;
+  }
+  h3{
+    text-align: center;
+  }
 }
