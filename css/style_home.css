@@ -361,10 +361,9 @@ ul {
   .navbar .social-icon {
     margin-top: 22px;
   }
-
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .aboutTribos {
     text-align: justify;
   }
