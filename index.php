@@ -12,7 +12,6 @@
 
     <title>Tribos | Conecte-se</title>
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
@@ -39,7 +38,7 @@
                             <a class="nav-link" href="#">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cadastre-se</a>
+                            <a class="nav-link" href="paginas/cadastro.php">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">
