@@ -67,9 +67,21 @@ h6 {
   font-weight: var(--font-weight-thin);
   line-height: normal;
 }
-i{
-  color: var(--white-color);
+/*                     TEMPORARIO                  */
+.explorar{
+  width: 22em;
+  padding: 20px 20px;
+  background-color: var(--white-color);
+  margin: 10em auto;
+  text-align: center;
+  
 }
+.explorar .title-explorar{
+  color: var(--dark-color);
+  font-size: 20px;
+}
+/*                                                       */
+
 .logo{
   width: 40px;
   height: 40px;

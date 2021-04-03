@@ -10,7 +10,7 @@ if(isset($_POST['email'])){
     //Verificar se está preenchido
     if(!empty($email) && !empty($senha)){
         if($u->logar($email, $senha)){
-            header("Location: explorar.php");
+            header("Location: ../front/explorar.php");
         }else{
     ?>
             <script>

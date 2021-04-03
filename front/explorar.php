@@ -7,7 +7,9 @@
   }
 ?>
 <body>
-    <h1>Seja bem vindo à Tribos</h1>
+  <div class="explorar">
+    <h3 class="title-explorar">Seja bem vindo à Tribos</h3>
     <a href="sair.php">Sair</a>
+  </div>
 </body>
 </html>
