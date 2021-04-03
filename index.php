@@ -32,10 +32,10 @@
                             <a class="nav-link" href="#">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Explore</a>
+                            <a class="nav-link" href="paginas/explorar.php">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Entre</a>
+                            <a class="nav-link" href="paginas/login.php">Entre</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="paginas/cadastro.php">Cadastre-se</a>

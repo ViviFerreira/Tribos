@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/style_home.css">
-
+    <link  rel = "icon"  type = "image/png"size = "32x32"  href = "../img/icon-180x180.png">
     <title>Tribos | Conecte-se</title>
 </head>
-<!-- <?php 
-    require_once('navBar.php');
-?> -->
