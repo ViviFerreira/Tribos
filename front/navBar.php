@@ -1,8 +1,8 @@
 <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Tribos</a>
-
+                <img class="logo" src="../img/logoTribosSemFundo.png" alt="Logo">
+                <span class="navbar-brand" href="index.html">Tribos</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -11,19 +11,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Explore</a>
+                            <a class="nav-link" href="explorar.php">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Entre</a>
+                            <a class="nav-link" href="login.php">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="paginas/cadastro.php">Cadastre-se</a>
+                            <a class="nav-link" href="cadastro.php">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">

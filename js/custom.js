@@ -17,3 +17,4 @@ $(document).ready(_ => {
     // animações
     AOS.init();
 });
+

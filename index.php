@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style_home.css">
-
+    <link rel="stylesheet" href="css/style_main.css">
+    <link  rel = "icon"  type = "image/png" size = "180x180"  href = "img/icon-180x180.png">
     <title>Tribos | Conecte-se</title>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Tribos</a>
-
+                <img class="logo" src="img/logoTribosSemFundo.png" alt="Logo">
+                <span class="navbar-brand" href="index.html">Tribos</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,19 +26,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="paginas/explorar.php">Explore</a>
+                            <a class="nav-link" href="front/explorar.php">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="paginas/login.php">Entre</a>
+                            <a class="nav-link" href="front/login.php">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="paginas/cadastro.php">Cadastre-se</a>
+                            <a class="nav-link" href="front/cadastro.php">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">
@@ -59,7 +59,7 @@
                             <div class="site-background" data-aos="fade-up" data-aos-delay="100">
                                 <h6 data-aos="fade-up" data-aos-delay="300">Somos a Tribos, uma plataforma feita para
                                     unir pessoas</h6>
-                                <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Faça parte!</h1>
+                                <h1 class="text-white title-main" data-aos="fade-up" data-aos-delay="500">Faça parte!</h1>
                                 <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up"
                                     data-aos-delay="600">Ver mais</a>
                                 <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up"
@@ -72,14 +72,14 @@
         </div>
     </section>
     <section class="aboutTribos">
-        <div class="container" data-aos="fade-up" data-aos-delay="300">
-            <h3>Nosso foco</h3>
-            <span class="resumo">A Tribos foi idealizada para contribuir no âmbito da socialização. Nosso principal
+        <div class="container">
+            <h3 data-aos="fade-up" data-aos-delay="300" class="title-section">Nosso foco</h3>
+            <span class="resumo" data-aos="fade-up" data-aos-delay="400">A Tribos foi idealizada para contribuir no âmbito da socialização. Nosso principal
                 objetivo é <strong>unir</strong> pessoas! </br> Desenvolvemos um ambiente virtual propício para que
                 você possa conhecer pessoas e compartilhar experiências.
             </span>
-            <h3>Nossa plataforma</h3>
-            <span class="plataforma">Com a Tribos <strong>você</strong> é capaz de descobir, criar e gerenciar eventos
+            <h3 data-aos="fade-up" data-aos-delay="300" class="title-section">Nossa plataforma</h3 data-aos="fade-up" data-aos-delay="300">
+            <span class="plataforma" data-aos="fade-up" data-aos-delay="400">Com a Tribos <strong>você</strong> é capaz de descobir, criar e gerenciar eventos
                 de diversos tipos. Participar de grupos ou como chamamos </br> tribos, formado por pessoas com as quais
                 você pode ter afinidade. Em atividades, como prática de esportes, trilhas em parques ecológicos, visitas
                 a museus, ingressão em palestras, idas a shows, igrejas, restaurantes e muito mais.
