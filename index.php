@@ -60,9 +60,9 @@
                                 <h6 data-aos="fade-up" data-aos-delay="300">Somos a Tribos, uma plataforma feita para
                                     unir pessoas</h6>
                                 <h1 class="text-white title-main" data-aos="fade-up" data-aos-delay="500">Faça parte!</h1>
-                                <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up"
+                                <a href="#aboutTribos" class="btn custom-btn mt-3" data-aos="fade-up"
                                     data-aos-delay="600">Ver mais</a>
-                                <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up"
+                                <a href="front/explorar.php" class="btn custom-btn bordered mt-3" data-aos="fade-up"
                                     data-aos-delay="700">#Explorar</a>
                             </div>
                         </section>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </section>
-    <section class="aboutTribos">
+    <section class="aboutTribos" id="aboutTribos">
         <div class="container">
             <h3 data-aos="fade-up" data-aos-delay="300" class="title-section">Nosso foco</h3>
             <span class="resumo" data-aos="fade-up" data-aos-delay="400">A Tribos foi idealizada para contribuir no âmbito da socialização. Nosso principal

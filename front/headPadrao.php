@@ -10,8 +10,13 @@
     <link rel="stylesheet" href="../css/style_main.css">
     <link rel="stylesheet" href="../css/style_forms.css">
     <link  rel = "icon"  type = "image/png" size = "180x180"  href = "../img/icon-180x180.png">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/custom.js"></script>
     <title>Tribos | Conecte-se</title>
 </head>
+<body>
 <?php
 require_once( 'navBar.php' );
 ?>

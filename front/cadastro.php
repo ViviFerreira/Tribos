@@ -1,8 +1,7 @@
 <?php
   require_once( 'headPadrao.php' );
-  require_once( '../back/processCad.php' );
+  require_once( '../back/processCadastro.php' );
 ?>
-<body>
 <section class="form-section">
   <form method="post">
       <div class="form-wrapper">

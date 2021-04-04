@@ -6,7 +6,6 @@
     exit;
   }
 ?>
-<body>
   <div class="explorar">
     <h3 class="title-explorar">Seja bem vindo à Tribos</h3>
     <a href="sair.php">Sair</a>
