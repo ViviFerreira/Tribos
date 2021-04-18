@@ -1,6 +1,6 @@
 <?php
-  require_once( 'headPadrao.php' );
-  require_once( '../back/processLogin.php' );
+  require_once '../includes/head.php';
+  require_once '../includes/login.php';
 ?>
 <section class="form-section">
   <form method="post">
@@ -17,9 +17,10 @@
     </div>
     <input type="submit" value="Acessar" class="btn btn-login">
     <div class="link-log">
-      <span>Ainda não é inscrito? <a href="cadastro.php" id="link-log">Cadastre-se</a></span>
+      <span>Ainda não é inscrito? <a href="formCadastro.php" id="link-log">Cadastre-se</a></span>
     </div>
   </form>
 </section>
-</body>
-</html>  
+<?php
+   require_once '../includes/footer.php';
+?>

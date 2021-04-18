@@ -1,8 +1,11 @@
 <?php
-//Verificar se clicou no botão 
-require_once('../classes/usuario.php');
-require_once('conexao.php');
+function __autoload($class_name){
+    require_once '../classes/' . $class_name . '.php';
+}
+require_once 'conexao.php';
 $u = new Usuario;
+
+//Verificar se clicou no botão 
 if(isset($_POST['nome'])){
     $nome = addslashes($_POST['nome']);
     $email = addslashes($_POST['email']);

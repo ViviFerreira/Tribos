@@ -1,5 +1,4 @@
 <?php
-
 Class Usuario {
     private $pdo;
     public function cadastrar($nome, $email, $senha){
@@ -22,7 +21,6 @@ Class Usuario {
             return true;
         }
     }
-
     public function logar($email, $senha){
         global $pdo;
         $sql = $pdo->prepare("SELECT idUsuario FROM usuario WHERE emailUsuario = :e AND senhaUsuario = :s");

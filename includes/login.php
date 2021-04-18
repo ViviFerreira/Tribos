@@ -1,7 +1,9 @@
 <?php
 //Verificar se clicou no botão 
-require_once('../classes/usuario.php');
-require_once('conexao.php');
+function __autoload($class_name){
+    require_once '../classes/'.$class_name.'.php';
+}
+require_once 'conexao.php';
 $u = new Usuario;
 if(isset($_POST['email'])){
     $email = addslashes($_POST['email']);
@@ -10,7 +12,7 @@ if(isset($_POST['email'])){
     //Verificar se está preenchido
     if(!empty($email) && !empty($senha)){
         if($u->logar($email, $senha)){
-            header("Location: ../front/explorar.php");
+            header("Location: ../pages/explorar.php");
         }else{
     ?>
             <script>

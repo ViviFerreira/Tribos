@@ -1,6 +1,6 @@
 <?php
-  require_once( 'headPadrao.php' );
-  require_once( '../back/processCadastro.php' );
+  require_once '../includes/head.php';
+  require_once '../includes/cadastro.php';
 ?>
 <section class="form-section">
   <form method="post">
@@ -29,5 +29,6 @@
         <input type="submit" value="Cadastrar" class="btn btn-login">
     </form>
 </section>
-</body>
-</html>
+<?php
+   require_once '../includes/footer.php';
+?>

@@ -20,10 +20,10 @@
                             <a class="nav-link" href="explorar.php">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Entre</a>
+                            <a class="nav-link" href="formLogin.php">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cadastro.php">Cadastre-se</a>
+                            <a class="nav-link" href="formCadastro.php">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">

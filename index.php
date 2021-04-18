@@ -32,13 +32,13 @@
                             <a class="nav-link" href="#">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="front/explorar.php">Explore</a>
+                            <a class="nav-link" href="pages/explorar.php">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="front/login.php">Entre</a>
+                            <a class="nav-link" href="pages/formLogin.php">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="front/cadastro.php">Cadastre-se</a>
+                            <a class="nav-link" href="pages/formCadastrophp">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">
@@ -86,12 +86,10 @@
             </span>
         </div>
     </section>
-    
     <!-- SCRIPTS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
 </html>
