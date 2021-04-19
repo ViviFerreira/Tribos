@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style_main.css">
+    <link rel="stylesheet" href="css/style_index.css">
     <link  rel = "icon"  type = "image/png" size = "180x180"  href = "img/icon-180x180.png">
     <title>Tribos | Conecte-se</title>
 </head>
@@ -38,7 +38,7 @@
                             <a class="nav-link" href="pages/formLogin.php">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/formCadastrophp">Cadastre-se</a>
+                            <a class="nav-link" href="pages/formCadastro.php">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">

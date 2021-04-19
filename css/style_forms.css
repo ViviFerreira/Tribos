@@ -1,62 +1,4 @@
-@font-face {
-    font-family: 'Plain';
-    src: url('../fonts/Plain-Regular.woff2') format('woff2'),
-      url('../fonts/Plain-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Plain';
-    src: url('../fonts/Plain-Light.woff2') format('woff2'),
-      url('../fonts/Plain-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Plain';
-    src: url('../fonts/Plain-Bold.woff2') format('woff2'),
-    url('../fonts/Plain-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  :root {
-    --primary-color: #f13a11;
-    --white-color: #ffffff;
-    --dark-color: #202225;
-    --about-bg-color: #f9f9f9;
-  
-    --gray-color: #909090;
-    --link-color: #404040;
-    --p-color: #666262;
-    --tamy: #58D68D;
-  
-    --base-font-family: 'Plain', sans-serif;
-    --font-weight-bold: bold;
-    --font-weight-normal: normal;
-    --font-weight-light: 300;
-    --font-weight-thin: 100;
-  
-    --h1-font-size: 48px;
-    --h2-font-size: 36px;
-    --h3-font-size: 28px;
-    --h4-font-size: 24px;
-    --h5-font-size: 22px;
-    --h6-font-size: 22px;
-    --p-font-size: 18px;
-    --base-font-size: 16px;
-    --menu-font-size: 14px;
-  
-    --border-radius-large: 100%;
-    --border-radius-small: 2px;
-  }
-  html,
-  body {
-    height: 100vh;
-  }
-  
+
   body {
     background-color: var(--tamy);
     min-height: 100vh;
@@ -81,23 +23,23 @@
     animation-delay: 100ms;
     animation-fill-mode: backwards;
   }
-  form {
+  .form-user {
     width: 25em;
     background-color: white;
     padding: 30px 25px;
     border-radius: 5px;
   }
-  form .input-block {
+  .form-user .input-block {
     margin-top: 10px;
     margin-bottom: 20px;
   }
   
-  form .input-block label {
+  .form-user .input-block label {
     font-size: 14px;
     color: darkslateblue;
   }
   
-  form .input-block input {
+  .form-user .input-block input {
     width: 100%;
     display: block;
     margin-top: 1em;
@@ -109,7 +51,7 @@
     outline-color: #7159c1;
   }
   
-  form .btn-login {
+  .form-user .btn-login {
     display: block;
     min-width: 10em;
     border: none;
@@ -122,7 +64,7 @@
     font-family:var(base-font-family);
   }
   
-  form .btn-login:hover{
+  .form-user .btn-login:hover{
     cursor: pointer;
     outline: none;
   }
@@ -135,22 +77,22 @@
     color: var(--dark-color);
   }
   /* APARIÇÃO DO FORM */
-  form {
+  .form-user {
     overflow: hidden;
     animation: fade 0.2s;
   }
   
-  form .input-block:nth-child(1) {
+  .form-user .input-block:nth-child(1) {
     animation: move 500ms;
   }
   
-  form .input-block:nth-child(2) {
+  .form-user .input-block:nth-child(2) {
     animation: move 400ms;
     animation-delay: 100ms;
     animation-fill-mode: backwards;
   }
   
-  form .btn-login {
+  .form-user .btn-login {
     animation: move 400ms;
     animation-delay: 250ms;
     animation-fill-mode: backwards;

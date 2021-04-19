@@ -3,7 +3,7 @@
   require_once '../includes/login.php';
 ?>
 <section class="form-section">
-  <form method="post">
+  <form method="post" class="form-user">
     <div class="form-wrapper">
     <span class="title-form">Login</span>
         <div class="input-block">
