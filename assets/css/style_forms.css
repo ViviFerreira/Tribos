@@ -45,10 +45,10 @@
     margin-top: 1em;
     padding: 7px;
     font-size: 16px;
-    color: #7159c1;
+    color: var(--dark-color);
     border-radius: 2px;
     border: 1px solid #ccddef;
-    outline-color: #7159c1;
+    outline-color: var(--dark-color);
   }
   
   .form-user .btn-login {

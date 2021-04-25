@@ -1,0 +1,9 @@
+{
+    "name": "tribos/tribos",
+    "description": "Plataforma para criar e controlar eventos - #Partir #Unir #Curtir",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

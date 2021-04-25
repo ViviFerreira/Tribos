@@ -1,7 +1,7 @@
 <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <img class="logo" src="../img/logoTribosSemFundo.png" alt="Logo">
+                <img class="logo" src="../assets/img/logoTribosSemFundo.png" alt="Logo">
                 <span class="navbar-brand" href="index.html">Tribos</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,13 +17,13 @@
                             <a class="nav-link" href="#">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="explorar.php">Explore</a>
+                            <a class="nav-link" href="inicio.php">Explore</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="formLogin.php">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="formCadastro.php">Cadastre-se</a>
+                            <a class="nav-link" href="formUsuario.php">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">

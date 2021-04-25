@@ -1,4 +1,6 @@
 <?php
+namespace Classes;
+use \PDO;
 Class Grupo {
     private $table = 'grupo';
     private $pdo;
@@ -27,7 +29,7 @@ Class Grupo {
         global $pdo;
         $lista = array();
         $sql = $pdo->query("SELECT * FROM $this->table ORDER BY nmGrupo");
-        $lista = $sql->fetchAll(PDO::FETCH_ASSOC);//TRAZER SOMENTE ID DO BANCO
+        $lista = $sql->fetch(PDO::FETCH_ASSOC);//TRAZER SOMENTE ID DO BANCO
         return $lista;
      }
 

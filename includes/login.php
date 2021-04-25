@@ -1,18 +1,16 @@
 <?php
+require_once '../vendor/autoload.php';
+use \App\Entity\Usuario;
+$obUser = new Usuario;
 //Verificar se clicou no botão 
-function __autoload($class_name){
-    require_once '../classes/'.$class_name.'.php';
-}
-require_once 'conexao.php';
-$u = new Usuario;
 if(isset($_POST['email'])){
-    $email = addslashes($_POST['email']);
-    $senha = addslashes($_POST['senha']);
+    $obUser->emailUsuario = addslashes($_POST['email']);
+    $obUser->senhaUsuario = addslashes($_POST['senha']);
 
     //Verificar se está preenchido
-    if(!empty($email) && !empty($senha)){
-        if($u->logar($email, $senha)){
-            header("Location: ../pages/explorar.php");
+    if(!empty($obUser->emailUsuario) && !empty($obUser->senhaUsuario)){
+        if($obUser->logar()){
+            header("Location: ../pages/inicio.php");
         }else{
     ?>
             <script>

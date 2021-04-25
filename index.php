@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style_index.css">
-    <link  rel = "icon"  type = "image/png" size = "180x180"  href = "img/icon-180x180.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style_index.css">
+    <link  rel = "icon"  type = "image/png" size = "180x180"  href = "assets/img/icon-180x180.png">
     <title>Tribos | Conecte-se</title>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <img class="logo" src="img/logoTribosSemFundo.png" alt="Logo">
+                <img class="logo" src="assets/img/logoTribosSemFundo.png" alt="Logo">
                 <span class="navbar-brand" href="index.html">Tribos</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,13 +31,13 @@
                             <a class="nav-link" href="#">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/explorar.php">Explore</a>
+                            <a class="nav-link" href="pages/inicio.php">Explore</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="pages/formLogin.php">Entre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/formCadastro.php">Cadastre-se</a>
+                            <a class="nav-link" href="pages/formUsuario.php">Cadastre-se</a>
                         </li>
                     </ul>
                     <ul class="social-icon ml-lg-5">
@@ -87,9 +86,9 @@
         </div>
     </section>
     <!-- SCRIPTS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>

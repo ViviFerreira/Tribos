@@ -1,6 +1,6 @@
 <?php
-  require_once '../includes/head.php';
-  require_once '../includes/cadastro.php';
+  require_once '../includes/header.php';
+  require_once '../includes/usuario.php';
 ?>
 <section class="form-section">
   <form method="post" class="form-user">
