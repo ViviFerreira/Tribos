@@ -1,10 +1,24 @@
+body{
+    overflow-x: hidden;
+}
+
 .dash{
     width: 95%;
     margin: 0 auto;
     margin-top: 2em;
+    background-color: #FDFEFE ;
 }
 .wellcome{
     font-weight: var(--font-weight-thin);
     line-height: normal;
     font-size: 20pt;
+}
+.nav-pages{
+    background-color: #1ABC9C;
+}
+
+.title-tribos{
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 500;
 }
