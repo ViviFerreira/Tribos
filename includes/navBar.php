@@ -14,17 +14,17 @@
                             <a class="nav-link active" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre nós</a>
+                            <a class="nav-link" href="inicio.php">Explorar</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="inicio.php">Explore</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="formLogin.php">Entre</a>
+                            <a class="nav-link" href="formLogin.php">Conecte-se</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="formUsuario.php">Cadastre-se</a>
                         </li>
+
                     </ul>
                     <ul class="social-icon ml-lg-5">
                         <li><a href="#" class="fa fa-facebook"></a></li>
