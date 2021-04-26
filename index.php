@@ -27,18 +27,23 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="index.php">Home</a>
                         </li>
+                        <!--
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sobre nós</a>
                         </li>
+                        -->
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/inicio.php">Explore</a>
+                            <a class="nav-link" href="pages/inicio.php">Explorar</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/formLogin.php">Entre</a>
+                            <a class="nav-link" href="pages/formLogin.php">Conecte-se</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="pages/formUsuario.php">Cadastre-se</a>
                         </li>
+
                     </ul>
                     <ul class="social-icon ml-lg-5">
                         <li><a href="#" class="fa fa-facebook"></a></li>
@@ -59,10 +64,9 @@
                                 <h6 data-aos="fade-up" data-aos-delay="300">Somos a Tribos, uma plataforma feita para
                                     unir pessoas</h6>
                                 <h1 class="text-white title-main" data-aos="fade-up" data-aos-delay="500">Faça parte!</h1>
-                                <a href="#aboutTribos" class="btn custom-btn mt-3" data-aos="fade-up"
-                                    data-aos-delay="600">Ver mais</a>
+
                                 <a href="front/explorar.php" class="btn custom-btn bordered mt-3" data-aos="fade-up"
-                                    data-aos-delay="700">#Explorar</a>
+                                    data-aos-delay="700">Veja mais</a>
                             </div>
                         </section>
                     </div>

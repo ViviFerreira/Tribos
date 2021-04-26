@@ -25,9 +25,7 @@
     <div class="navbar-nav ml-n2">
       <a class="nav-item nav-link active text-white" href="../index.php"><i class="bi bi-house"></i> Home</a>
     </div>
-    <div class="navbar-nav ml-n4">
-      <a class="nav-item nav-link active  text-white" href="#"><i class="bi bi-people"></i> Tribos</a>
-    </div>
+    
     <div class="navbar-nav ml-n4">
       <a class="nav-item nav-link active  text-white" href="#"><i class="bi bi-calendar2-event"></i> Eventos</a>
     </div>

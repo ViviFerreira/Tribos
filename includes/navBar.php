@@ -18,7 +18,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="inicio.php">Explore</a>
-                        </li>
+                        </li> 
                         <li class="nav-item">
                             <a class="nav-link" href="formLogin.php">Entre</a>
                         </li>
