@@ -19,7 +19,7 @@
   <section class="dash">
     <div class="jumbotron dash">
       <h3 class="display-4 wellcome text-dark">Seja Bem Vindo(a) à Tribos, <?=$nmUsuario?>!</h3>
-      <p class="lead text-dark">A Tribos é uma plataforma criada para contribuir no âmbito social, nosso objetivo é unir pessoas!</p>
+      <p class="lead text-dark">A Tribos é uma plataforma criada para contribuir no âmbito social, nosso foco é a união!</p>
       <hr class="my-4">
       <a href="cadastrarTribo.php"><button class="btn btn-outline-primary btn-sm" href="#">Criar uma tribo</button>
     </a>

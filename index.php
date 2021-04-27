@@ -71,7 +71,7 @@
     </section>
     <section class="aboutTribos" id="aboutTribos">
         <div class="container">
-            <h3 data-aos="fade-up" data-aos-delay="300" class="title-section">Nosso foco</h3>
+            <h3 data-aos="fade-up" data-aos-delay="300" class="title-section">Sobre nós</h3>
             <span class="resumo" data-aos="fade-up" data-aos-delay="400">A Tribos foi idealizada para contribuir no âmbito da socialização. Nosso principal
                 objetivo é <strong>unir</strong> pessoas! </br> Desenvolvemos um ambiente virtual propício para que
                 você possa conhecer pessoas e compartilhar experiências.
@@ -82,6 +82,13 @@
                 você pode ter afinidade. Em atividades, como prática de esportes, trilhas em parques ecológicos, visitas
                 a museus, ingressão em palestras, idas a shows, igrejas, restaurantes e muito mais.
             </span>
+            
+        </div class="container">
+            <p id="margem">
+                Todos os direitos reservados.
+            </p>
+        <div>
+
         </div>
     </section>
     <!-- SCRIPTS -->
