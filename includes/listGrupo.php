@@ -24,7 +24,7 @@
 
     $grupoUserLogado = $obGrupoUserLogado->getGrupoUsuario($idUsuarioLogado, $grupo->idGrupo);
     // Se o usuário logado foi quem criou a tribo, ele pode editar e participar              
-    $resultados .= $idUsuarioLogado == $grupo->idUsuarioCriou ? 
+    $resultados = $idUsuarioLogado == $grupo->idUsuarioCriou ? 
                         ' 
                         <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-dark">Editar</a>
                         ' : null;
