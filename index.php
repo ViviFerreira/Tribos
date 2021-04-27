@@ -27,11 +27,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="index.php">Home</a>
                         </li>
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre nós</a>
-                        </li>
-                        -->
                         <li class="nav-item">
                             <a class="nav-link" href="pages/inicio.php">Explorar</a>
                         </li>

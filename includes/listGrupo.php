@@ -24,7 +24,7 @@
 
     $grupoUserLogado = $obGrupoUserLogado->getGrupoUsuario($idUsuarioLogado, $grupo->idGrupo);
     // Se o usuário logado foi quem criou a tribo, ele pode editar e participar              
-    $resultados .= $idUsuarioLogado == $grupo->idUsuarioCriou ? 
+    $resultados = $idUsuarioLogado == $grupo->idUsuarioCriou ? 
                         ' 
                         <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-dark">Editar</a>
                         ' : null;
@@ -40,11 +40,7 @@
                       </a>
                       ';
    
-  $resultados = strlen($resultados) ? $resultados : '<tr>
-                                                       <td colspan="6" class="text-center">
-                                                              Nenhuma tribo encontrada
-                                                       </td>
-                                                    </tr>';
+  $resultados = strlen($resultados) ? $resultados : 'Nenhuma tribo encontrada';
 ?>
 <div class="card" style="width: 18rem; display:inline-block">
   <div class="card-header">
@@ -59,7 +55,6 @@
     </div>
   </div>
 </div>
-
 <?php
  }
 ?>
