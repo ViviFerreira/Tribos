@@ -49,6 +49,7 @@
 <div class="card" style="width: 18rem; display:inline-block">
   <div class="card-header">
     Criada por <?=$nmUsuarioCriador?>
+    
   </div>
   <div class="card-body">
     <h5 class="card-title"><?=$grupo->nmGrupo?></h5>
