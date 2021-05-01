@@ -41,6 +41,6 @@ if(isset($_POST['nome'],$_POST['desc']))
     }
 }
 
-// require_once '../includes/headerPages.php';
+require_once '../includes/headerPages.php';
 require_once '../includes/formGrupo.php';
 require_once '../includes/footer.php';

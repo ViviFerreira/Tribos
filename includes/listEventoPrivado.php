@@ -36,7 +36,7 @@
     // Apenas entra no resultado se o evento for privado e o usuário fizer parte da tribo que criou o evento
     if($evento->flEventoPrivado == 's' && !empty($grupoUserLogado)){
       // Consultando se o usuario já participa do evento 
-      $eventoUserLogado = $obEventoUserLogado->getEventoUsuario($idUsuarioLogado, $evento->idEvento);
+      $eventoUserLogado = $obEventoUserLogado->getEventoUsuario($evento->idEvento, $idUsuarioLogado);
 
        // Se o usuário logado foi quem criou a tribo do evento, ele pode editar           
        $resultados = $idUsuarioLogado == $idUserCriador ? 

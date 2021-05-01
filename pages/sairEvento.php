@@ -23,5 +23,3 @@ if(isset($_GET['id'])){
         exit;
     }
 }
-// require_once '../includes/headerPages.php';
-require_once '../includes/footer.php';

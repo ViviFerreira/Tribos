@@ -30,20 +30,26 @@
                         ' 
                         <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-primary">Editar</a>
                         ' : null;
+
     // Se o usuario logado já participa da tribo aparece botão para sair, se não para participar               
     $resultados .= !empty($grupoUserLogado) ?
                       '  
                       <a href="../pages/sairTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-danger">
                       Sair
                       </a>
-                      <a href="../pages/cadastrarEvento.php?id='.$grupo->idGrupo.'" class="btn btn-outline-success">
-                      Novo Evento
-                      </a>
                       ' : 
                       ' 
                       <a href="../pages/participarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-success">Participar
                       </a>
                       ';
+    // Se o usuário logado for quem criou a tribo, e ele já participa da tribo, pode incluir um novo evento 
+    $resultados .= ($idUsuarioLogado == $grupo->idUsuarioCriou and !empty($grupoUserLogado)) ? 
+                        ' 
+                        <a href="../pages/cadastrarEvento.php?id='.$grupo->idGrupo.'" class="btn btn-outline-info">
+                        Novo Evento
+                        </a>
+                        ' : 
+                        null;
    
   $resultados = strlen($resultados) ? $resultados : 'Nenhuma tribo encontrada';
 ?>

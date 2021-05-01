@@ -19,8 +19,8 @@ class EventosUsuario{
       //INSERIR NO BANCO 
       $obDatabase = new Database($this->table);
       $this->idEventosUsuario = $obDatabase->insert([
-                                        'idEvento' => $this->idUsuario,
-                                        'idUsuario' => $this->idEvento,
+                                        'idEvento' => $this->idEvento,
+                                        'idUsuario' => $this->idUsuario,
                                       ]);
 
       //RETORNAR SUCESSO
