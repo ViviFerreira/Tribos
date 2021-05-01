@@ -1,7 +1,7 @@
 <?php
 require_once '../vendor/autoload.php';
-use \App\Entity\GruposUsuario;
-$obGrupoUser = new GruposUsuario;
+use \App\Entity\EventosUsuario;
+$obEventoUser = new EventosUsuario;
 session_start();
 if(!isset($_SESSION['idUsuario'])){
   header("Location: formLogin.php");
@@ -11,15 +11,15 @@ if(!isset($_SESSION['idUsuario'])){
 }
 //Verificar se clicou no botão 
 if(isset($_GET['id'])){
-    $obGrupoUser->idGrupo = addslashes($_GET['id']);
-    $obGrupoUser->idUsuario = addslashes($idUsuarioLogado);
+    $obEventoUser->idEvento = addslashes($_GET['id']);
+    $obEventoUser->idUsuario = addslashes($idUsuarioLogado);
     //Verificar se está preenchido
-    if($obGrupoUser->participar())
+    if($obEventoUser->participar())
     {
-        header('location: inicio.php?status=success');
+        header('location: eventosAbertos.php?status=success');
         exit;
     }else{
-        header('location: inicio.php?status=error');
+        header('location: inicioAbertos.php?status=error');
         exit;
     }
 }

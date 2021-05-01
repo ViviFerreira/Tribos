@@ -10,6 +10,7 @@ class Grupo{
   public $nmGrupo;
   public $descGrupo;
   public $idUsuarioCriou;
+  
   public $table = 'grupo';
   /**
    * Método responsável por cadastrar um novo usuário no banco 

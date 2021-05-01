@@ -6,14 +6,13 @@
   $obUser = new Usuario; 
   $obGrupo = new Grupo; 
   session_start();
-  if(!isset($_SESSION['idUsuario'])){
+  $userLogado = $obUser->getUsuario($_SESSION['idUsuario']);
+  if(!isset($_SESSION['idUsuario']) or empty($userLogado)){
     header("Location: formLogin.php");
     exit;
-  }else{
-    $obUser = new Usuario;
-    $userLogado = $obUser->getUsuario($_SESSION['idUsuario']);
-    $nmUsuario = $userLogado->nmUsuario;
-  }
+    }else{
+      $nmUsuario = $userLogado->nmUsuario;
+    }
   $grupos = $obGrupo->getGrupos();
   ?>
   <section class="dash">

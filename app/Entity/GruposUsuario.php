@@ -6,9 +6,10 @@ use \App\Db\Database;
 use \PDO;
 
 class GruposUsuario{
-  public $idGrupoUsuario;
+  public $idGruposUsuario;
   public $idGrupo;
   public $idUsuario;
+  
   public $table = 'gruposusuario';
   /**
    * Método responsável por cadastrar um novo grupo do usuário
@@ -17,11 +18,11 @@ class GruposUsuario{
   public function participar(){
       //INSERIR NO BANCO 
       $obDatabase = new Database($this->table);
-      $this->idGrupo = $obDatabase->insert([
+      $this->idGruposUsuario = $obDatabase->insert([
                                         'idGrupo' => $this->idGrupo,
                                         'idUsuario' => $this->idUsuario,
                                       ]);
-
+      
       //RETORNAR SUCESSO
       return true;
   }

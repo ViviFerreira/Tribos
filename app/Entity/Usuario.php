@@ -10,6 +10,7 @@ class Usuario{
   public $nmUsuario;
   public $emailUsuario;
   public $senhaUsuario;
+  
   public $table = 'usuario';
   /**
    * Método responsável por cadastrar um novo usuário no banco 

@@ -22,12 +22,11 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-n2">
-      <a class="nav-item nav-link active text-white" href="../index.php"><i class="bi bi-house"></i> Home</a>
+  <div class="navbar-nav ml-n2">
+      <a class="nav-item nav-link active text-white" href="../pages/inicio.php"><i class="bi bi-house"></i> Inicio</a>
     </div>
-    
     <div class="navbar-nav ml-n4">
-      <a class="nav-item nav-link active  text-white" href="#"><i class="bi bi-calendar2-event"></i> Eventos</a>
+      <a class="nav-item nav-link active  text-white" href="../pages/eventosAbertos.php"><i class="bi bi-calendar2-event"></i> Eventos</a>
     </div>
   </div>
   <a href="../pages/sair.php" class="text-white"><i class="bi bi-box-arrow-right"></i> Sair</a>

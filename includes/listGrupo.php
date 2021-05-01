@@ -19,20 +19,25 @@
   }
   $resultados = '';
   foreach($grupos as $grupo){
+    //Consultando usuario criador da tribo 
     $userCriador = $obUser->getUsuario($grupo->idUsuarioCriou);
     $nmUsuarioCriador = $userCriador->nmUsuario;
 
+    //Consultando tribos do usuário logado 
     $grupoUserLogado = $obGrupoUserLogado->getGrupoUsuario($idUsuarioLogado, $grupo->idGrupo);
     // Se o usuário logado foi quem criou a tribo, ele pode editar e participar              
     $resultados = $idUsuarioLogado == $grupo->idUsuarioCriou ? 
                         ' 
-                        <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-dark">Editar</a>
+                        <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-primary">Editar</a>
                         ' : null;
     // Se o usuario logado já participa da tribo aparece botão para sair, se não para participar               
     $resultados .= !empty($grupoUserLogado) ?
                       '  
                       <a href="../pages/sairTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-danger">
                       Sair
+                      </a>
+                      <a href="../pages/cadastrarEvento.php?id='.$grupo->idGrupo.'" class="btn btn-outline-success">
+                      Novo Evento
                       </a>
                       ' : 
                       ' 
@@ -58,4 +63,4 @@
 <?php
  }
 ?>
-
+<?=$mensagem?>
