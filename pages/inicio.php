@@ -6,11 +6,11 @@
   $obUser = new Usuario; 
   $obGrupo = new Grupo; 
   session_start();
-  $userLogado = $obUser->getUsuario($_SESSION['idUsuario']);
-  if(!isset($_SESSION['idUsuario']) or empty($userLogado)){
-    header("Location: formLogin.php");
-    exit;
+  if(!isset($_SESSION["idUsuario"])){
+      header("Location: formLogin.php");
+      exit;
     }else{
+      $userLogado = $obUser->getUsuario($_SESSION['idUsuario']);
       $nmUsuario = $userLogado->nmUsuario;
     }
   $grupos = $obGrupo->getGrupos();
@@ -20,12 +20,16 @@
       <h3 class="display-4 wellcome">Seja Bem-Vindo(a) à Tribos, <?=$nmUsuario?>!</h3>
       <p class="lead text-dark">A Tribos é uma plataforma criada para contribuir no âmbito social, nosso foco é a união!</p>
       <hr class="my-4">
-      <a href="cadastrarTribo.php"><button class="btn btn-outline-dark btn-sm" href="#">Criar uma tribo</button>
+      <a href="cadastrarTribo.php"><button class="btn btn-primary btn-sm" href="#">Criar uma tribo</button>
     </a>
     </div>
   </section>
-  <h4 class="title-tribos"><i class="bi bi-people"></i> Tribos Abertas</h2>
-<?php
-  require_once '../includes/listGrupo.php';
-  require_once '../includes/footer.php';
-?>
+  <section class="tribos">
+    <h4 class="title-tribos"><i class="bi bi-people"></i> Tribos</h4>
+      <?php
+        require_once '../includes/listGrupo.php';
+      ?>
+  </section>
+  <?php
+    require_once '../includes/footer.php';
+  ?>

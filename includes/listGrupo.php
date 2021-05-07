@@ -31,24 +31,24 @@
     // Se o usuário logado foi quem criou a tribo, ele pode editar e participar              
     $resultados = $idUsuarioLogado == $grupo->idUsuarioCriou ? 
                         ' 
-                        <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-primary btn-sm">Editar</a>
+                        <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-primary btn-sm">Editar</a>
                         ' : null;
 
     // Se o usuario logado já participa da tribo aparece botão para sair, se não para participar               
     $resultados .= !empty($grupoUserLogado) ?
                       '  
-                      <a href="../pages/sairTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-danger btn-sm">
+                      <a href="../pages/sairTribo.php?id='.$grupo->idGrupo.'" class="btn btn-danger btn-sm">
                       Sair
                       </a>
                       ' : 
                       ' 
-                      <a href="../pages/participarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-outline-success btn-sm">Participar
+                      <a href="../pages/participarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-success btn-sm">Participar
                       </a>
                       ';
     // Se o usuário logado for quem criou a tribo, e ele já participa da tribo, pode incluir um novo evento 
     $resultados .= ($idUsuarioLogado == $grupo->idUsuarioCriou and !empty($grupoUserLogado)) ? 
                         ' 
-                        <a href="../pages/cadastrarEvento.php?id='.$grupo->idGrupo.'" class="btn btn-outline-info btn-sm">
+                        <a href="../pages/cadastrarEvento.php?id='.$grupo->idGrupo.'" class="btn btn-info btn-sm">
                         Novo Evento
                         </a>
                         ' : 
@@ -59,7 +59,7 @@
 	<div class="cards_wrap">
 		<div class="card_item">
 			<div class="card_inner">
-				<img src="../assets/img/imgCards.jpg">
+				<img src="../assets/img/imgCards.png">
 				<div class="role_name"><?=$grupo->nmGrupo?></div>
 				<div class="real_name">Criada por <?=$nmUsuarioCriador?></div>
 				<div class="film"><?=$grupo->descGrupo?></div>
