@@ -477,6 +477,7 @@ ul {
 @media screen and (max-width: 500px){
   .aboutTribos {
     text-align: justify;
+    padding-top: 1em;
   }
   h3{
     text-align: center;

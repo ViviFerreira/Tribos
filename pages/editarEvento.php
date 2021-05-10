@@ -36,10 +36,9 @@ if(isset($_POST['nome'],$_POST['desc']))
     $obEvento->flEventoPrivado = addslashes($_POST['tipo']);
     $obEvento->localEvento = addslashes($_POST['local']);
     $obEvento->numLocalEvento = addslashes($_POST['num']);
-    $obEvento->idGrupoCriou = addslashes($_GET['id']);
 
     //Verificar se está preenchido
-    if(!empty($obEvento->nmEvento) && !empty($obEvento->descEvento) && !empty($obEvento->dtEvento) && !empty($obEvento->hrEvento) && !empty($obEvento->qtPartsEvento) && !empty($obEvento->localEvento)  && !empty($obEvento->numLocalEvento) && !empty($obEvento->idGrupoCriou))
+    if(!empty($obEvento->nmEvento) && !empty($obEvento->descEvento) && !empty($obEvento->dtEvento) && !empty($obEvento->hrEvento) && !empty($obEvento->qtPartsEvento) && !empty($obEvento->localEvento)  && !empty($obEvento->numLocalEvento))
     {
         $obEvento->atualizar();
         header('location: eventosAbertos.php?status=success');

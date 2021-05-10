@@ -127,21 +127,6 @@ body{
 	text-align: center;
 	color: white;
 }
-.alert-green,
-.alert-red{
-	width: 30em;
-	padding: 5px;
-	background-color: #62d2a2;
-	margin: 0em auto;
-	text-align: center;
-	color: #303841;
-	border-radius: 5px;
-	
-}
-.alert-red{
-	background-color: #f73859;
-	color: #f7fbfc;
-}
 
 .new-tribo,
 .new-evento{
@@ -184,10 +169,6 @@ body{
     .title-tribos{
         text-align: center;
     }
-	.alert-green,
-	.alert-red{	
-		width: 95%;
-	}
 	.confirme{
 		width: 95%;
 	}
@@ -195,10 +176,16 @@ body{
 		width: 100%;
 		margin: 5em auto;
 	}
-	.new-tribo h2{
+	.new-tribo h2,
+	.new-evento h2{
 		text-align: center;
 	}
+	
 	.line{
 		width: 100%;
+	}
+	.eventos-publicos,
+	.eventos-privados{ 
+		padding: 0;
 	}
 }

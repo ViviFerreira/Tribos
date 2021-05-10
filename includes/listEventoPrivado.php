@@ -93,16 +93,16 @@
       $obGruposUserLogado = $obGrupoUserLogado->getGruposUsuario('idUsuario = '.$idUsuarioLogado);
       echo empty($obGruposUserLogado) ? '
       <div class="container">
-        <div class="alert alert-warning mt-5" role="alert">
+        <div class="alert alert-warning mt-5 mb-5" role="alert">
         <i class="bi bi-emoji-smile-upside-down-fill"></i> Você não faz parte de nenhuma tribo!
         </div>
       </div>' : '';
       echo (empty(!$obGruposUserLogado) and empty($resultados)) ? '
       <div class="container">
-        <div class="alert alert-warning mt-5" role="alert">
+        <div class="alert alert-warning mt-5 mb-5" role="alert">
         <i class="bi bi-emoji-smile-upside-down-fill"></i> Nenhum evento das tribos no momento!
         </div> 
-      </div>;' 
+      </div>' 
                               : null; 
     ?>
 </div>

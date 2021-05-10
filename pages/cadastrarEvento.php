@@ -30,7 +30,7 @@ if(isset($_POST['nome'])){
     {
         if($obEvento->cadastrar())
         {
-            header('location: inicio.php?status=success');
+            header('location: eventosAbertos.php?status=success');
             exit;
         }else{
             header('location: inicio.php?status=error');
