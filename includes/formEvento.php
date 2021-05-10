@@ -48,13 +48,13 @@
                     </label>
                 </div>
             </div>
-            <div class="mt-4 row">
-                <div class="col-md-6">
+            <div class=" row">
+                <div class="mt-4 col-md-6">
                     <label for="tipo"> Local do Evento </label>
                     <input type="local" class="form-control" name="local" id="local" autocomplete="off" maxlength="200"
                     required value="<?=$obEvento->localEvento?>">
                 </div>
-                <div class=" mt-4 col-md-2">
+                <div class="mt-4 col-md-2">
                     <label for="tipo"> Nº </label>
                     <input type="num" class="form-control" name="num" id="num" autocomplete="off" required value="<?=$obEvento->numLocalEvento?>">
                 </div>

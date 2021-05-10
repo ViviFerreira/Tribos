@@ -103,7 +103,7 @@ body{
 .eventos-privados{ 
 	width: 100%;
 	padding: 20px;
-	background-color: #f9f7f7;
+	/* background-color: #f9f7f7; */
 }
 .table-evento{
 	margin-top: 8em;
