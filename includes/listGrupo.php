@@ -5,18 +5,6 @@
   $obGrupoUserLogado = new GruposUsuario;
   $obUser = new Usuario; 
   $idUsuarioLogado = $_SESSION['idUsuario'];
-  $mensagem = '';
-  if(isset($_GET['status'])){
-    switch ($_GET['status']) {
-      case 'success':
-        $mensagem = '<div class="alert alert-success">Ação executada com sucesso!</div>';
-        break;
-
-      case 'error':
-        $mensagem = '<div class="alert alert-danger">Ação não executada!</div>';
-        break;
-    }
-  }
   $resultados = '';
   ?>
   <div class="wrapper">
@@ -31,30 +19,29 @@
     // Se o usuário logado foi quem criou a tribo, ele pode editar e participar              
     $resultados = $idUsuarioLogado == $grupo->idUsuarioCriou ? 
                         ' 
-                        <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Editar</a>
                         ' : null;
 
     // Se o usuario logado já participa da tribo aparece botão para sair, se não para participar               
     $resultados .= !empty($grupoUserLogado) ?
                       '  
                       <a href="../pages/sairTribo.php?id='.$grupo->idGrupo.'" class="btn btn-danger btn-sm">
-                      Sair
+                      <i class="bi bi-door-closed"></i> Sair
                       </a>
                       ' : 
                       ' 
-                      <a href="../pages/participarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-success btn-sm">Participar
+                      <a href="../pages/participarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-success btn-sm"><i class="bi bi-door-open"></i> Participar
                       </a>
                       ';
     // Se o usuário logado for quem criou a tribo, e ele já participa da tribo, pode incluir um novo evento 
     $resultados .= ($idUsuarioLogado == $grupo->idUsuarioCriou and !empty($grupoUserLogado)) ? 
                         ' 
                         <a href="../pages/cadastrarEvento.php?id='.$grupo->idGrupo.'" class="btn btn-info btn-sm">
-                        Novo Evento
+                        <i class="bi bi-calendar2-event"></i> Novo Evento
                         </a>
                         ' : 
                         null;
    
-  $resultados = strlen($resultados) ? $resultados : 'Nenhuma tribo encontrada';
 ?>
 	<div class="cards_wrap">
 		<div class="card_item">
@@ -73,4 +60,3 @@
   }
   ?>
 </div>
-<?=$mensagem?>

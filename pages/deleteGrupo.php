@@ -3,6 +3,7 @@
 require __DIR__.'/vendor/autoload.php';
 
 use \App\Entity\Grupo;
+$obGrupo = new Grupo;
 
 //VALIDAÇÃO DO ID
 if(!isset($_GET['idUsuario']) or !is_numeric($_GET['idUsuario'])){
@@ -11,7 +12,7 @@ if(!isset($_GET['idUsuario']) or !is_numeric($_GET['idUsuario'])){
 }
 
 //CONSULTA O GRUPO
-$obGrupo = Grupo::getGrupo($_GET['idUsuario']);
+$obGrupo = $obGrupo->getGrupo($_GET['idUsuario']);
 
 //VALIDAÇÃO DO GRUPO
 if(!$obGrupo instanceof Grupo){

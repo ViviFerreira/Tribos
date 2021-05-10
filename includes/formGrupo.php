@@ -1,16 +1,22 @@
-<section class="container">
+<section class="container new-tribo">
     <form method="post">
         <h2 class="mt-3"><?=TITLE?></h2>
         <div class="mt-5 form-group">
             <label for="nmGrupo">Escolha um nome para sua tribo</label>
-            <input type="text" class="form-control" name="nome" id="nmGrupo" autofocus autocomplete="off" placeholder="Digite o nome" maxlength="45" required value="<?=$obGrupo->nmGrupo?>">
+            <div class="input-group mt-3 line">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-emoji-smile"></i></span>
+                <input type="text" class="form-control line" name="nome" id="nmGrupo" autofocus autocomplete="off" placeholder="Digite o nome" maxlength="45" required value="<?=$obGrupo->nmGrupo?>">
+            </div>
         </div>
         <div class="form-group">
             <label for="nmGrupo">Decreva sua Tribo</label>
-            <input class="form-control" name="desc" id="desc"  placeholder="Digite a descrição" maxlength="200" value="<?=$obGrupo->descGrupo?>">
+            <div class="input-group mt-3 line">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-list-nested"></i></span>
+                <input type="text" class="form-control" name="desc" id="desc" autocomplete="off" placeholder="Digite a descrição" maxlength="200" value="<?=$obGrupo->descGrupo?>">
+            </div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-success">Enviar</button>
+            <button type="submit" class="btn btn-success btn-sm mt-3">Enviar</button>
         </div>
     </form>
 </section>

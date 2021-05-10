@@ -1,7 +1,6 @@
 <?php
 
 require_once '../vendor/autoload.php';
-
 define('TITLE','Editar Tribo');
 
 use \App\Entity\Grupo;

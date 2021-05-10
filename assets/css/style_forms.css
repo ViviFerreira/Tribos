@@ -1,7 +1,6 @@
 
   body {
     min-height: 100vh;
-    overflow-y: hidden;
   }
   .main-user{
     width: 100%;
@@ -34,6 +33,7 @@
     padding: 30px 25px;
     border-radius: 5px;
     margin-top: 10em;
+    margin-bottom: 10em;
   }
   .form-user .input-block {
     margin-top: 10px;

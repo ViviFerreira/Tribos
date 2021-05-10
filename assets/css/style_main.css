@@ -15,7 +15,7 @@ body{
     width: 100%;
     margin: 0 auto;
     margin-top: 3em;
-    background-color: #fafafa;
+    background-color: #f9f7f7;
 }
 .wellcome{
     font-weight: var(--font-weight-normal);
@@ -99,19 +99,15 @@ body{
 .buttons{
     margin-top: 1em;
 }
-
 .eventos-publicos,
 .eventos-privados{ 
 	width: 100%;
 	padding: 20px;
 	background-color: #f9f7f7;
-	margin-top: 4em;
 }
 .table-evento{
-	margin-top: 6em;
-}
-.eventos-privados{
-	margin-top: 0em;
+	margin-top: 8em;
+	margin-bottom: 2em;
 }
 
 .color-table{
@@ -120,8 +116,46 @@ body{
 	font-weight: var(--font-weight-normal);
 }
 .color-table-bh{
-	background-color: #ffe9d6;
+	background-color: #f9f7f7;
 	color: var(--dark-color);
+}
+.confirme{
+	width: 50em;
+	padding: 5px;
+	background-color: var(--dark-color);
+	margin: 15em auto;
+	text-align: center;
+	color: white;
+}
+.alert-green,
+.alert-red{
+	width: 30em;
+	padding: 5px;
+	background-color: #62d2a2;
+	margin: 0em auto;
+	text-align: center;
+	color: #303841;
+	border-radius: 5px;
+	
+}
+.alert-red{
+	background-color: #f73859;
+	color: #f7fbfc;
+}
+
+.new-tribo,
+.new-evento{
+	margin-top: 5em;
+}
+.new-tribo h2,
+.new-evento h2{
+	font-size: var(--h4-font-size);
+	font-weight: var(--font-weight-bold);
+	letter-spacing: -2px;
+	padding-top: 2em;
+}
+.line{
+	width: 50em;
 }
 @media screen and (max-width: 1024px){
 	.cards_wrap .card_item{
@@ -145,10 +179,26 @@ body{
     }
     .cards_wrap{
         display: block;
-        width: 95%;
+        width: 98%;
     }
     .title-tribos{
         text-align: center;
     }
-
+	.alert-green,
+	.alert-red{	
+		width: 95%;
+	}
+	.confirme{
+		width: 95%;
+	}
+	.new-tribo{
+		width: 100%;
+		margin: 5em auto;
+	}
+	.new-tribo h2{
+		text-align: center;
+	}
+	.line{
+		width: 100%;
+	}
 }
