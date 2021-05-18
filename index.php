@@ -78,9 +78,9 @@
             </span>
             <h3 data-aos="fade-up" data-aos-delay="300" class="title-section">Nossa plataforma</h3 data-aos="fade-up" data-aos-delay="300">
             <span class="plataforma" data-aos="fade-up" data-aos-delay="400">Com a Tribos <strong>você</strong> é capaz de descobir, criar e gerenciar eventos
-                de diversos tipos. Participar de grupos ou como chamamos </br> tribos, formado por pessoas com as quais
+                de diversos tipos. Participar de grupos ou como chamamos </br> "tribos", formado por pessoas com as quais
                 você pode ter afinidade. Em atividades, como prática de esportes, trilhas em parques ecológicos, visitas
-                a museus, ingressão em palestras, idas a shows, igrejas, restaurantes e muito mais.
+                a museus, ingressão em palestras, idas a shows, igrejas, restaurantes e muito mais!
             </span>
         </div>
     </section>

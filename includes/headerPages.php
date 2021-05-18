@@ -45,14 +45,9 @@
                             <a class="nav-link" href="../pages/sair.php">
                             <i class="bi bi-box-arrow-right"></i> Sair</a>
                         </li>
-
-                    </ul>
-                    <ul class="social-icon ml-lg-5">
-                        <li><a href="#" class="fa fa-facebook"></a></li>
-                        <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-instagram"></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+

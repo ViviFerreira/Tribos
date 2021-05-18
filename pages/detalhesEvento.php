@@ -5,7 +5,7 @@
   use \App\Entity\Evento;
   use App\Entity\EventosUsuario;
 
-$obGrupo = new Grupo; 
+  $obGrupo = new Grupo; 
   $obEvento = new Evento; 
   $obUsuariosEvento = new EventosUsuario;
   session_start();

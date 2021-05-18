@@ -33,7 +33,7 @@
                         <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
                     </div>
                     <a href="#">
-                        <button type="button" class="btn btn-default">Contato</button>
+                        <button type="button" class="btn btn-default btn-sm">Contato</button>
                     </a>
                 </div>
             </div>

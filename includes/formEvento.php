@@ -13,8 +13,8 @@
                 <input type="text" class="form-control" name="desc" id="desc" autocomplete="off" maxlength="200" required value="<?=$obEvento->descEvento?>">
             </div>
         </div>
-        <div class="mt-4 row">
-            <div class="col-md-4">
+        <div class="row">
+            <div class="mt-4 col-md-4">
                 <label for="data">Data do Evento</label>
                 <input type="date" class="form-control" name="data" id="data"  autocomplete="off" required
                     value="<?=$obEvento->dtEvento?>">
@@ -44,7 +44,7 @@
 
                 <div class="form-check form-check-inline">
                     <label class="form-control">
-                        <input type="radio" name="tipo" value="n" <?=$obEvento->flEventoPrivado == 'n' ? 'checked' : ''?> id="tipo"> Público
+                        <input type="radio" name="tipo" value="n" <?=$obEvento->flEventoPrivado == 'n' ? 'checked' : ''?> id="tipo"> Aberto
                     </label>
                 </div>
             </div>
