@@ -9,11 +9,12 @@ class Grupo{
   public $idGrupo;
   public $nmGrupo;
   public $descGrupo;
+  public $flAtivo;
   public $idUsuarioCriou;
   
   public $table = 'grupo';
   /**
-   * Método responsável por cadastrar um novo usuário no banco 
+   * Método responsável por cadastrar um novo grupo no banco 
    * @return boolean
    */
   public function cadastrar(){
@@ -32,6 +33,7 @@ class Grupo{
       $this->idGrupo = $obDatabase->insert([
                                         'nmGrupo'   => $this->nmGrupo,
                                         'descGrupo' => $this->descGrupo,
+                                        'flAtivo' => $this->flAtivo,
                                         'idUsuarioCriou' => $this->idUsuarioCriou,
                                       ]);
 
@@ -47,20 +49,30 @@ class Grupo{
     return (new Database($this->table))->update('idGrupo = '.$this->idGrupo,[
                                         'nmGrupo'   => $this->nmGrupo,
                                         'descGrupo' => $this->descGrupo,
+                                        'flAtivo' => $this->flAtivo,
                                         'idUsuarioCriou' => $this->idUsuarioCriou,
                                                               ]);
   }
 
   /**
-   * Método responsável por excluir um usuário no banco de dados
+   * Método responsável por excluir um grupo no banco de dados
    * @return boolean
    */
   public function excluir(){
     return (new Database($this->table))->delete('idGrupo = '.$this->idGrupo);
   }
-
   /**
-   * Método responsável por obter os usuários do banco da dados
+   * Método responsável por inativar um grupo
+   */
+
+  public function inativar(){
+    return (new Database($this->table))->update('idGrupo = '.$this->idGrupo,[
+                                        'flAtivo' => $this->flAtivo,
+                                                              ]);
+  }
+  
+  /**
+   * Método responsável por obter os grupos do banco da dados
    * @param  string $where
    * @param  string $order
    * @param  string $limit

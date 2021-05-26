@@ -16,6 +16,7 @@ class Evento{
   public $flEventoPrivado;
   public $localEvento;
   public $numLocalEvento;
+  public $flAtivo;
   public $idGrupoCriou;
 
   public $table = 'evento';
@@ -36,6 +37,7 @@ class Evento{
                                         'flEventoPrivado' => $this->flEventoPrivado,
                                         'LocalEvento' => $this->localEvento,
                                         'numLocalEvento' => $this->numLocalEvento,
+                                        'flAtivo' => $this->flAtivo,
                                         'idGrupoCriou' => $this-> idGrupoCriou,
                                       ]);
 
@@ -58,6 +60,7 @@ class Evento{
                                       'flEventoPrivado' => $this->flEventoPrivado,
                                       'localEvento' => $this->localEvento,
                                       'numLocalEvento' => $this->numLocalEvento,
+                                      'flAtivo' => $this->flAtivo,
                                       'idGrupoCriou' => $this-> idGrupoCriou,
                                                               ]);
   }
@@ -68,6 +71,16 @@ class Evento{
    */
   public function excluir(){
     return (new Database($this->table))->delete('idEvento = '.$this->idEvento);
+  }
+
+   /**
+   * Método responsável por inativar/fechar um evento
+   */
+
+  public function fechar(){
+    return (new Database($this->table))->update('idEvento = '.$this->idEvento,[
+                                        'flAtivo' => $this->flAtivo,
+                                                              ]);
   }
 
   /**

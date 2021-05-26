@@ -44,6 +44,10 @@
         break;
     }
   }
+
+  //BUSCA
+  $busca = filter_input(INPUT_GET, 'busca', FILTER_SANITIZE_STRING);
+
   ?>
   <section class="dash">
     <div class="jumbotron dash">

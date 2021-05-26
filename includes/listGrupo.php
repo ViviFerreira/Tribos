@@ -8,6 +8,24 @@
   $resultados = '';
   ?>
   <div class="wrapper">
+
+  <!-- Filtros -->
+  <section class="ml-4">
+    <form method="get">
+      <div class="row my-4">
+
+        <div class="col">
+          <label><i class="bi bi-filter-right"></i> Buscar tribo</label>
+          <input type="text" name="buscar" class="form-control" value="<?=$busca>" autofocus>
+        </div>
+
+          <div class="col d-flex align-items-end ml-n3">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-filter"></i> Filtrar</button>
+          </div>
+      </div>
+    </form>
+  </section>
+
   <?php
   foreach($grupos as $grupo){
     //Consultando usuario criador da tribo 
@@ -20,6 +38,7 @@
     $resultados = $idUsuarioLogado == $grupo->idUsuarioCriou ? 
                         ' 
                         <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Editar</a>
+                        <a href="../pages/inativarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-secondary btn-sm"><i class="bi bi-x-square"></i> Inativar</a>
                         ' : null;
 
     // Se o usuario logado já participa da tribo aparece botão para sair, se não para participar               
