@@ -78,10 +78,23 @@ class Grupo{
    * @param  string $limit
    * @return array
    */
-  public function getGrupos($where = null, $order = null, $limit = null){
-    return (new Database($this->table))->select($where,$order,$limit)
+  public function getGrupos($where = null, $and = null, $order = null, $limit = null){
+    return (new Database($this->table))->select($where, $and, $order,$limit)
                                   ->fetchAll(PDO::FETCH_CLASS,self::class);
   }
+
+  /**
+   * Método responsável por obter a quantidade de grupos do banco da dados
+   * @param  string $where
+   * @return integer
+   */
+  public function getQntGrupos($where = null){
+    return (new Database($this->table))->select($where, null, null, null,'COUNT(*) as qtdGrupos')
+                                  ->fetchObject()
+                                  ->qtdGrupos;
+  }
+
+
 
   /**
    * Método responsável por buscar um usuário no banco de dados

@@ -3,6 +3,8 @@
   require_once '../vendor/autoload.php';
   use \App\Entity\Usuario;
   use \App\Entity\Grupo;
+  use \App\Db\Pagination;
+
   $obUser = new Usuario; 
   $obGrupo = new Grupo; 
   session_start();
@@ -13,7 +15,37 @@
       $userLogado = $obUser->getUsuario($_SESSION['idUsuario']);
       $nmUsuario = $userLogado->nmUsuario;
     }
-  $grupos = $obGrupo->getGrupos();
+  
+  //BUSCA
+  $busca = filter_input(INPUT_GET, 'busca', FILTER_SANITIZE_STRING);
+  
+  //FILTRO STATUS
+  $filtroStatus = filter_input(INPUT_GET, 'filtroStatus', FILTER_SANITIZE_STRING);
+  
+  $filtroStatus = in_array($filtroStatus,['s','n']) ? $filtroStatus : '';
+  
+  //CONDIÇÕES SQL
+  $condicoes = [
+    strlen($busca) ? 'nmGrupo LIKE "%'.str_replace(' ','%',$busca).'%"' : null
+    ,strlen($filtroStatus) ? 'flAtivo = "'.$filtroStatus.'"' : null
+  ];
+
+  //REMOVE POSIÇÕES VAZIAS
+  $condicoes = array_filter($condicoes); 
+
+  //CLÁUSULA WHERE 
+  $where = implode(' AND ',$condicoes);
+  
+  //QUANTIDADE TOTAL DE GRUPOS
+  $qntGrupos = $obGrupo->getQntGrupos($where);
+  
+  //PAGINAÇÃO 
+  $obPagination = new Pagination($qntGrupos, $_GET['pagina'] ?? 1, 9);
+  $limit = $obPagination->getLimit();
+
+  //OBTEM AS TRIBOS
+  $grupos = $obGrupo->getGrupos($where, null, null, $limit);
+
   $result = '';
   $result = empty($grupos) ? '
   <div class="container">
@@ -44,9 +76,6 @@
         break;
     }
   }
-
-  //BUSCA
-  $busca = filter_input(INPUT_GET, 'busca', FILTER_SANITIZE_STRING);
 
   ?>
   <section class="dash">

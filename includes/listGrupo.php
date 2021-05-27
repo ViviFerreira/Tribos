@@ -16,12 +16,21 @@
 
         <div class="col">
           <label><i class="bi bi-filter-right"></i> Buscar tribo</label>
-          <input type="text" name="buscar" class="form-control" value="<?=$busca>" autofocus>
+          <input type="text" name="busca" class="form-control" value="<?=$busca?>" autocomplete="off" autofocus>
         </div>
 
-          <div class="col d-flex align-items-end ml-n3">
-            <button type="submit" class="btn btn-primary"><i class="bi bi-filter"></i> Filtrar</button>
-          </div>
+        <div class="col">
+          <label><i class="bi bi-filter-right"></i> Status</label>
+          <select name="filtroStatus" class="form-control">
+            <option value="">Ativa/Inativa</option>
+            <option value="s" <?=$filtroStatus == 's'? 'selected' : ''?>>Ativa</option>
+            <option value="n" <?=$filtroStatus == 'n'? 'selected' : ''?>>Inativa</option>
+          </select>
+        </div>
+
+        <div class="col d-flex align-items-end ml-n3">
+          <button type="submit" class="btn btn-primary"><i class="bi bi-filter"></i> Filtrar</button>
+        </div>
       </div>
     </form>
   </section>
@@ -60,7 +69,21 @@
                         </a>
                         ' : 
                         null;
-   
+
+  //GETS
+  unset($_GET['status']);
+  unset($_GET['pagina']);
+  $gets = http_build_query($_GET);
+
+  //PAGINAÇÃO                   
+  $paginacao =  '';
+  $paginas = $obPagination->getPages();
+  foreach ($paginas as $key => $pagina) {
+    $class = $pagina['atual'] ? 'btn-primary' : 'btn-dark';
+    $paginacao .= '<a href="?pagina='.$pagina['pagina'].'&'.$gets.'">
+                      <button type="button" class="btn '.$class.'">'.$pagina['pagina'].'</button>
+                   </a>';
+  }
 ?>
 	<div class="cards_wrap">
 		<div class="card_item">
@@ -78,4 +101,7 @@
   <?php
   }
   ?>
+  <section class="ml-3">
+    <?=$paginacao ?? ''?>
+  </section>
 </div>
