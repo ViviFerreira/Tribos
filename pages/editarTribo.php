@@ -26,6 +26,7 @@ if(isset($_POST['nome'],$_POST['desc']))
 {
     $obGrupo->nmGrupo = addslashes($_POST['nome']);
     $obGrupo->descGrupo = addslashes($_POST['desc']);
+    $obGrupo->flAtivo = addslashes($_POST['status']);
     if(!empty($obGrupo->nmGrupo) && !empty($obGrupo->descGrupo))
     {
         $obGrupo->atualizar();

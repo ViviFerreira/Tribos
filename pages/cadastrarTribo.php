@@ -14,6 +14,7 @@ if(!isset($_SESSION['idUsuario'])){
 if(isset($_POST['nome'])){
     $obGrupo->nmGrupo = addslashes($_POST['nome']);
     $obGrupo->descGrupo = addslashes($_POST['desc']);
+    $obGrupo->flAtivo = addslashes($_POST['status']);
     $obGrupo->idUsuarioCriou = addslashes($idUsuarioLogado);
     //Verificar se está preenchido
     if(!empty($obGrupo->nmGrupo) && !empty($obGrupo->descGrupo))

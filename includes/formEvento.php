@@ -32,35 +32,35 @@
             </div>
         </div>
         <div>
-            <div class="mt-4 form-group line">
-                <div>
-                    <label>Visibilidade</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-control">
-                        <input type="radio" name="tipo" value="s" checked> Somente tribo
-                    </label>
-                </div>
+        <div class="mt-4 form-group line">
+            <div>
+                <label>Visibilidade</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-control">
+                    <input type="radio" name="tipo" value="s" checked> Somente tribo
+                </label>
+            </div>
 
-                <div class="form-check form-check-inline">
-                    <label class="form-control">
-                        <input type="radio" name="tipo" value="n" <?=$obEvento->flEventoPrivado == 'n' ? 'checked' : ''?> id="tipo"> Aberto
-                    </label>
-                </div>
+            <div class="form-check form-check-inline">
+                <label class="form-control">
+                    <input type="radio" name="tipo" value="n" <?=$obEvento->flEventoPrivado == 'n' ? 'checked' : ''?> id="tipo"> Aberto
+                </label>
             </div>
-            <div class=" row">
-                <div class="mt-4 col-md-6">
-                    <label for="tipo"> Local do Evento </label>
-                    <input type="local" class="form-control" name="local" id="local" autocomplete="off" maxlength="200"
-                    required value="<?=$obEvento->localEvento?>">
-                </div>
-                <div class="mt-4 col-md-2">
-                    <label for="tipo"> Nº </label>
-                    <input type="num" class="form-control" name="num" id="num" autocomplete="off" required value="<?=$obEvento->numLocalEvento?>">
-                </div>
+        </div>
+        <div class=" row">
+            <div class="mt-4 col-md-6">
+                <label for="tipo"> Local do Evento </label>
+                <input type="local" class="form-control" name="local" id="local" autocomplete="off" maxlength="200"
+                required value="<?=$obEvento->localEvento?>">
             </div>
-            <div class="mt-4 form-group">
-                <button type="submit" class="btn btn-success btn-sm">Enviar</button>
+            <div class="mt-4 col-md-2">
+                <label for="tipo"> Nº </label>
+                <input type="num" class="form-control" name="num" id="num" autocomplete="off" required value="<?=$obEvento->numLocalEvento?>">
             </div>
+        </div>
+        <div class="mt-4 form-group">
+            <button type="submit" class="btn btn-success btn-sm">Enviar</button>
+        </div>
     </form>
 </section>

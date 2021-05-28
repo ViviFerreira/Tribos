@@ -47,7 +47,6 @@
     $resultados = $idUsuarioLogado == $grupo->idUsuarioCriou ? 
                         ' 
                         <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Editar</a>
-                        <a href="../pages/inativarTribo.php?id='.$grupo->idGrupo.'" class="btn btn-secondary btn-sm"><i class="bi bi-x-square"></i> Inativar</a>
                         ' : null;
 
     // Se o usuario logado já participa da tribo aparece botão para sair, se não para participar               

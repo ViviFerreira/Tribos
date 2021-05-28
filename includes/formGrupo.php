@@ -15,6 +15,22 @@
                 <input type="text" class="form-control" name="desc" id="desc" autocomplete="off" placeholder="Digite a descrição" maxlength="200" value="<?=$obGrupo->descGrupo?>">
             </div>
         </div>
+        <div class="form-group line">
+            <div>
+                <label>Status</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-control">
+                    <input type="radio" name="status" value="s" checked> Ativa
+                </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="form-control">
+                    <input type="radio" name="status" value="n" <?=$obGrupo->flAtivo == 'n' ? 'checked' : ''?> id="tipo"> Inativa
+                </label>
+            </div>
+        </div>
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-sm mt-3">Enviar</button>
         </div>
