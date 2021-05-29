@@ -61,15 +61,7 @@ class Grupo{
   public function excluir(){
     return (new Database($this->table))->delete('idGrupo = '.$this->idGrupo);
   }
-  /**
-   * Método responsável por inativar um grupo
-   */
-
-  public function inativar(){
-    return (new Database($this->table))->update('idGrupo = '.$this->idGrupo,[
-                                        'flAtivo' => $this->flAtivo,
-                                                              ]);
-  }
+  
   
   /**
    * Método responsável por obter os grupos do banco da dados

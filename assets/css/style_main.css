@@ -40,60 +40,16 @@ body{
 	font-family: var(--base-font-family);
 }
 
-/* CARDS*/
-.tribos{
-	width: 100%;
-	padding: auto;
+.h7 {
+	font-size: 0.8rem;
 }
-.wrapper{
-    width: 100%;
-    padding-bottom:25px;
-    margin-top: 2em;
+.gedf-card{
+	background-color: var(--dark-color);
+	color: white;
 }
-.cards_wrap{
-	padding: 15px;
-	width: 33%;
-    display: inline-flex;
-    margin: 0 auto;
-}
-.cards_wrap .card_item{
-	width: 30em;
-}
-
-.cards_wrap .card_inner{
-	background: var(--dark-color);
-	border-radius: 5px;
-	padding: 35px 20px;
-}
-
-.cards_wrap .card_item img{
-	width: 80px;
-	height: 80px;
-    border-radius: 50%;
-}
-
-.cards_wrap .card_item .role_name{
-	color: #FFF;
-	font-weight: 900;
-	letter-spacing: 0px;
-	text-transform: uppercase;
-	font-size: 20px;
-	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cards_wrap .card_item .real_name{
-	color: #FFF;
-	font-size: 12px;
-	font-weight: 100;
-	margin: 5px 0 10px;
-}
-
-.cards_wrap .card_item .film{
-	font-size: 14px;
-	line-height: 24px;
-	color: #FFF;
+.dropdown-toggle::after {
+	content: none;
+	display: none;
 }
 
 .buttons{
@@ -155,16 +111,9 @@ body{
 }
 
 @media screen and (max-width: 568px){
-	.cards_wrap .card_item{
-		width: 100%;
-	}
     .wellcome{
         font-size: 16pt;
         margin-top: 1em;
-    }
-    .cards_wrap{
-        display: block;
-        width: 98%;
     }
     .title-tribos{
         text-align: center;
