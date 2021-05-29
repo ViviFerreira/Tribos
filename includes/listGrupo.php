@@ -5,7 +5,6 @@
   $obGrupoUserLogado = new GruposUsuario;
   $obUser = new Usuario; 
   $idUsuarioLogado = $_SESSION['idUsuario'];
-  $opcoesUsuarioComum = '';
   $opcoesUsuarioAdmin = '';
   $resultados = '';
   ?>
@@ -46,7 +45,7 @@
   </section>
 
   <div class="container-fluid gedf-wrapper mt-3 mb-5">
-        <div class="row">
+      <div class="row">
   <?php
   foreach($grupos as $grupo){
     //Consultando usuario criador da tribo 
@@ -99,7 +98,6 @@
   }
 ?>
             <div class="col-md-4 gedf-main mt-3">
-                <!--- \\\\\\\Post-->
                 <div class="card gedf-card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">

@@ -33,9 +33,12 @@
     }
   }
   $resultados = '';
+  $opcoesUsuarioAdmin = '';
   ?>
   <div class="eventos-privados"> 
       <h4 class="title-tribos"><i class="bi bi-calendar2-event"></i> Eventos das minhas tribos</h4>
+      <div class="container-fluid gedf-wrapper mb-3">
+        <div class="row">
       <?php
       foreach($eventos as $evento){
         //Consultando nome e id do grupo criador do evento 
@@ -54,9 +57,9 @@
           $eventoUserLogado = $obEventoUserLogado->getEventoUsuario($evento->idEvento, $idUsuarioLogado);
 
           // Se o usuário logado foi quem criou a tribo do evento, ele pode editar           
-          $resultados = $idUsuarioLogado == $idUserCriador ? 
+          $opcoesUsuarioAdmin = $idUsuarioLogado == $idUserCriador ? 
                             ' 
-                            <a href="../pages/editarEvento.php?id='.$evento->idEvento.'" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Editar</a>
+                            <a href="../pages/editarEvento.php?id='.$evento->idEvento.'" class="dropdown-item"><i class="bi bi-pencil-square"></i> Editar</a>
                             ' 
                                                           : null;
           //Verifica se o evento está lotado 
@@ -75,26 +78,52 @@
           }else{ 
             $resultados .='<a href="#" class="btn btn-success btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Participar</a>';
           }
-          $resultados .=    '
-                            <a href="../pages/detalhesEvento.php?id='.$evento->idEvento.'" class="btn btn-info btn-sm"><i class="bi bi-three-dots-vertical"></i> Detalhes</a>
-                            ';  
+
     ?>
-      <div class="cards_wrap">
-          <div class="card_item">
-            <div class="card_inner">
-              <img src="../assets/img/imgCardsEvento.jpg">
-              <div class="role_name"><?=$evento->nmEvento?></div>
-              <div class="real_name">Criada por <?=$nmGrupoCriador?></div>
-              <div class="film"><?=$evento->descEvento?></div>
-              <div class="buttons">
-                <?=$resultados?>
-              </div>
+      <div class="col-md-4 gedf-main mt-3">
+                <div class="card gedf-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mr-2 tribo">
+                                    <img class="rounded-circle" width="45" height="45" src="https://img.freepik.com/vetores-gratis/conceito-de-papel-de-parede-elegante-textura-branca_23-2148432202.jpg?size=626&ext=jpg" alt="">
+                                </div>
+                                <div class="ml-2">
+                                    <div class="h5 m-0"><?=$evento->nmEvento?></div>
+                                    <div class="h7 text-muted"> Por <?=$nmGrupoCriador?></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown">
+                                    <button class="btn btn-link text-white" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                        <div class="h6 dropdown-header">Mais Opções</div>
+                                        <?='<a href="../pages/detalhesEvento.php?id='.$evento->idEvento.'" class="dropdown-item"><i class="bi bi-eye"></i> Detalhes</a>'?>
+                                        <?=$opcoesUsuarioAdmin?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-text">
+                          <?=$evento->descEvento?>
+                        </span>
+                    </div>
+                    <div class="card-footer">
+                      <?=$resultados?>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
     <?php
         }
     }
+    ?>
+      </div>
+    </div>
+    <?php
       // Consultando se o usuário participa de alguma tribo 
       $obGruposUserLogado = $obGrupoUserLogado->getGruposUsuario('idUsuario = '.$idUsuarioLogado);
       echo empty($obGruposUserLogado) ? '
