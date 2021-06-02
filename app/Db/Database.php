@@ -44,7 +44,7 @@ class Database{
   private $connection;
 
   /**
-   * Define a tabela e instancia e conexão
+   * Define a tabela, instancia e conexão
    * @param string $table
    */
   public function __construct($table = null){

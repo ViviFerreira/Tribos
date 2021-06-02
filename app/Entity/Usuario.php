@@ -67,7 +67,7 @@ public function logar(){
    */
   public function atualizar(){
     return (new Database($this->table))->update('idUsuario = '.$this->idUsuario,[
-                                    'nmUsuaio'     => $this->nmUsuario,
+                                    'nmUsuario'     => $this->nmUsuario,
                                     'emailUsuario' => $this->emailUsuario,
                                     'senhaUsuario' => $this->senhaUsuario,
                                                               ]);
