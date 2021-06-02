@@ -4,6 +4,8 @@
   use \App\Entity\Grupo;
   use \App\Entity\Evento;
   use \App\Entity\Usuario;
+  use \App\Db\Pagination;
+  
   $obUser = new Usuario;
   $obGrupo = new Grupo; 
   $obEvento = new Evento; 
@@ -15,7 +17,35 @@
     $userLogado = $obUser->getUsuario($_SESSION['idUsuario']);
     $nmUsuario = $userLogado->nmUsuario;
   }
-  $eventos = $obEvento->getEventos();
+
+  //BUSCA
+  $busca = filter_input(INPUT_GET, 'busca', FILTER_SANITIZE_STRING);
+  
+  //FILTRO STATUS
+  $filtroStatus = filter_input(INPUT_GET, 'filtroStatus', FILTER_SANITIZE_STRING);
+  
+  $filtroStatus = in_array($filtroStatus,['s','n']) ? $filtroStatus : '';
+  
+  //CONDIÇÕES SQL
+  $condicoes = [
+    strlen($busca) ? 'nmEvento LIKE "%'.str_replace(' ','%',$busca).'%"' : null
+    ,strlen($filtroStatus) ? 'flAtivo = "'.$filtroStatus.'"' : null
+  ];
+
+  //REMOVE POSIÇÕES VAZIAS
+  $condicoes = array_filter($condicoes); 
+
+  //CLÁUSULA WHERE 
+  $where = implode(' AND ',$condicoes);
+  
+  //QUANTIDADE TOTAL DE EVENTOS
+  $qntEventos = $obEvento->getQntEventos($where);
+  
+  //PAGINAÇÃO 
+  $obPagination = new Pagination($qntEventos, $_GET['pagina'] ?? 1, 6);
+  $limit = $obPagination->getLimit();
+
+  $eventos = $obEvento->getEventos($where, null, null, $limit);
   ?>
   <section class="dash">
     <div class="jumbotron dash">

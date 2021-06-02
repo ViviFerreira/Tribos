@@ -28,15 +28,6 @@
           </select>
         </div>
 
-        <div class="col-md-2 mt-2">
-          <label><i class="bi bi-filter-right"></i> Participação</label>
-          <select name="filtroStatus" class="form-control">
-            <option value="s" <?=$filtroStatus == 's'? 'selected' : ''?>>Partipo</option>
-            <option value="n" <?=$filtroStatus == 'n'? 'selected' : ''?>>Não participo</option>
-            <option value="">Todas</option>
-          </select>
-        </div>
-
         <div class="col-md-4 d-flex align-items-end mt-3">
           <button type="submit" class="btn btn-info"><i class="bi bi-filter"></i> Filtrar</button>
         </div>

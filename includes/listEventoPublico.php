@@ -16,7 +16,7 @@
     switch ($_GET['status']) {
       case 'success': 
         $mensagem = ' 
-              <div class="container">
+              <div class="container mt-5">
                 <div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-square-fill"></i> Pronto! Ação realizada com sucesso
                 </div>
               </div>
@@ -24,7 +24,7 @@
         break;
       case 'error':
         $mensagem = '
-              <div class="container">
+              <div class="container mt-5">
                 <div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Ops! Erro ao executar ação
                 </div>
               </div>
@@ -35,7 +35,32 @@
   $resultados = '';
   $opcoesUsuarioAdmin = '';
   ?>
-  <div class="eventos-publicos">
+  <!-- Filtros -->
+  <section class="">
+    <form method="get">
+      <div class="row mx-auto">
+        <div class="col-md-4 mt-2">
+          <label><i class="bi bi-filter-right"></i> Buscar evento</label>
+          <input type="text" name="busca" class="form-control" value="<?=$busca?>" autocomplete="off" autofocus>
+        </div>
+
+        <div class="col-md-2 mt-2">
+          <label><i class="bi bi-filter-right"></i> Status</label>
+          <select name="filtroStatus" class="form-control">
+            <option value="s" <?=$filtroStatus == 's'? 'selected' : ''?>>Ativa</option>
+            <option value="n" <?=$filtroStatus == 'n'? 'selected' : ''?>>Inativa</option>
+            <option value="">Todas</option>
+          </select>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-end mt-3">
+          <button type="submit" class="btn btn-info"><i class="bi bi-filter"></i> Filtrar</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <div class="eventos">
     <?=$mensagem?>
     <h4 class="title-tribos"><i class="bi bi-calendar2-event"></i> Eventos Abertos</h4>
     <div class="container-fluid gedf-wrapper">
@@ -75,7 +100,6 @@
         }else{ 
           $resultados ='<a href="#" class="btn btn-success btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Participar</a>';
         }
-
   ?> 
     <div class="col-md-4 gedf-main mt-3">
                 <div class="card gedf-card">

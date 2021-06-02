@@ -55,12 +55,7 @@ body{
 .buttons{
     margin-top: 1em;
 }
-.eventos-publicos,
-.eventos-privados{ 
-	width: 100%;
-	padding: 20px;
-	/* background-color: #f9f7f7; */
-}
+
 .table-evento{
 	margin-top: 8em;
 	margin-bottom: 2em;
@@ -132,9 +127,5 @@ body{
 	
 	.line{
 		width: 100%;
-	}
-	.eventos-publicos,
-	.eventos-privados{ 
-		padding: 0;
 	}
 }

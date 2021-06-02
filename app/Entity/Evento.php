@@ -72,8 +72,8 @@ class Evento{
   public function excluir(){
     return (new Database($this->table))->delete('idEvento = '.$this->idEvento);
   }
-
-   /**
+  
+  /**
    * Método responsável por inativar/fechar um evento
    */
 
@@ -93,6 +93,17 @@ class Evento{
   public function getEventos($where = null, $order = null, $limit = null){
     return (new Database($this->table))->select($where,$order,$limit)
                                   ->fetchAll(PDO::FETCH_CLASS,self::class);
+  }
+
+  /**
+   * Método responsável por obter a quantidade de eventos do banco da dados
+   * @param  string $where
+   * @return integer
+   */
+  public function getQntEventos($where = null){
+    return (new Database($this->table))->select($where, null, null, null,'COUNT(*) as qtdEventos')
+                                  ->fetchObject()
+                                  ->qtdEventos;
   }
 
   /**

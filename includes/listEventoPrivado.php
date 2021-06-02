@@ -16,7 +16,7 @@
     switch ($_GET['status']) {
       case 'success': 
         $mensagem = ' 
-              <div class="container">
+              <div class="container mt-2">
                 <div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-square-fill"></i> Pronto! Ação realizada com sucesso
                 </div>
               </div>
@@ -24,7 +24,7 @@
         break;
       case 'error':
         $mensagem = '
-              <div class="container">
+              <div class="container mt-2">
                 <div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Ops! Erro ao executar ação
                 </div>
               </div>
@@ -35,7 +35,8 @@
   $resultados = '';
   $opcoesUsuarioAdmin = '';
   ?>
-  <div class="eventos-privados"> 
+  
+  <div class="eventos"> 
       <h4 class="title-tribos"><i class="bi bi-calendar2-event"></i> Eventos das minhas tribos</h4>
       <div class="container-fluid gedf-wrapper mb-3">
         <div class="row">
@@ -68,16 +69,30 @@
           $parts = count($usuariosEventoSetado); 
           // Se o usuario logado já participa do evento aparece botão para sair, se não para participar (se o evento não estiver lotado) 
           if(!empty($eventoUserLogado)){ 
-            $resultados .= ' <a href="../pages/sairEvento.php?id='.$evento->idEvento.'" class="btn btn-danger btn-sm">
+            $resultados = ' <a href="../pages/sairEvento.php?id='.$evento->idEvento.'" class="btn btn-danger btn-sm">
                               <i class="bi bi-door-closed"></i> Sair
                             </a>';
           }elseif($parts < $qtPartsEventoSetado){
-            $resultados .= ' <a href="../pages/participarEvento.php?id='.$evento->idEvento.'" class="btn btn-success btn-sm"><i class="bi bi-door-open"></i> 
+            $resultados = ' <a href="../pages/participarEvento.php?id='.$evento->idEvento.'" class="btn btn-success btn-sm"><i class="bi bi-door-open"></i> 
                                 Participar
                               </a>';
           }else{ 
-            $resultados .='<a href="#" class="btn btn-success btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Participar</a>';
+            $resultados ='<a href="#" class="btn btn-success btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Participar</a>';
           }
+    //GETS
+    unset($_GET['status']);
+    unset($_GET['pagina']);
+    $gets = http_build_query($_GET);
+
+    //PAGINAÇÃO                   
+    $paginacao =  '';
+    $paginas = $obPagination->getPages();
+    foreach ($paginas as $key => $pagina) {
+      $class = $pagina['atual'] ? 'btn-primary' : 'btn-dark';
+      $paginacao .= '<a href="?pagina='.$pagina['pagina'].'&'.$gets.'">
+                        <button type="button" class="btn '.$class.'">'.$pagina['pagina'].'</button>
+                    </a>';
+    }
 
     ?>
       <div class="col-md-4 gedf-main mt-3">
@@ -140,4 +155,6 @@
       </div>' 
                                                                 : null; 
     ?>
-</div>
+  <section class="ml-3 mt-3 mb-3">
+    <?=$paginacao ?? ''?>
+  </section>

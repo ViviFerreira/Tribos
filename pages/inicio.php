@@ -90,10 +90,10 @@
   </section>
   <section class="tribos">
     <h4 class="title-tribos"><i class="bi bi-people"></i> Tribos</h4>
-    <?=$result?>
-      <?php
+    <?php
         require_once '../includes/listGrupo.php';
-      ?>
+    ?>
+        <?=$result?>
   </section>
   <?php
     require_once '../includes/footer.php';
