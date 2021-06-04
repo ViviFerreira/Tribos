@@ -74,16 +74,6 @@ class Evento{
   }
   
   /**
-   * Método responsável por inativar/fechar um evento
-   */
-
-  public function fechar(){
-    return (new Database($this->table))->update('idEvento = '.$this->idEvento,[
-                                        'flAtivo' => $this->flAtivo,
-                                                              ]);
-  }
-
-  /**
    * Método responsável por obter os eventos do banco da dados
    * @param  string $where
    * @param  string $order

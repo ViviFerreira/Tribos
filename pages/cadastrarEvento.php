@@ -23,6 +23,7 @@ if(isset($_POST['nome'])){
     $obEvento->flEventoPrivado = addslashes($_POST['tipo']);
     $obEvento->localEvento = addslashes($_POST['local']);
     $obEvento->numLocalEvento = addslashes($_POST['num']);
+    $obEvento->flAtivo = addslashes($_POST['status']);
     $obEvento->idGrupoCriou = addslashes($_GET['id']);
 
     //Verificar se está preenchido

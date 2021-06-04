@@ -47,9 +47,9 @@
         <div class="col-md-2 mt-2">
           <label><i class="bi bi-filter-right"></i> Status</label>
           <select name="filtroStatus" class="form-control">
-            <option value="s" <?=$filtroStatus == 's'? 'selected' : ''?>>Ativa</option>
-            <option value="n" <?=$filtroStatus == 'n'? 'selected' : ''?>>Inativa</option>
-            <option value="">Todas</option>
+            <option value="s" <?=$filtroStatus == 's'? 'selected' : ''?>>Ativo</option>
+            <option value="n" <?=$filtroStatus == 'n'? 'selected' : ''?>>Inativo</option>
+            <option value="">Todos</option>
           </select>
         </div>
 
@@ -135,6 +135,10 @@
                     </div>
                     <div class="card-footer">
                       <?=$resultados?>
+                      <?=$evento->flAtivo == 's' ? 
+                      '<span class="h6 text-warning center"><i class="bi bi-emoji-smile"></i> Evento Ativo </span> ' :
+                      '<span class="h6 text-muted center"><i class="bi bi-emoji-frown"></i> Evento Inativo </span> '
+                      ?>
                     </div>
                 </div>
             </div>

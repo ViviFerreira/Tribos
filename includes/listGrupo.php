@@ -122,6 +122,10 @@
                     </div>
                     <div class="card-footer">
                       <?=$resultados?>
+                      <?=$grupo->flAtivo == 's' ? 
+                      '<span class="h6 text-warning center"><i class="bi bi-emoji-smile"></i> Tribo Ativa </span> ' :
+                      '<span class="h6 text-muted center"><i class="bi bi-emoji-frown"></i> Tribo Inativa </span> '
+                      ?>
                     </div>
                 </div>
             </div>

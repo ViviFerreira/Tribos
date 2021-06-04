@@ -48,15 +48,31 @@
                 </label>
             </div>
         </div>
-        <div class=" row">
-            <div class="mt-4 col-md-6">
+        <div class="row">
+            <div class="mt-2 col-md-6">
                 <label for="tipo"> Local do Evento </label>
                 <input type="local" class="form-control" name="local" id="local" autocomplete="off" maxlength="200"
                 required value="<?=$obEvento->localEvento?>">
             </div>
-            <div class="mt-4 col-md-2">
+            <div class="mt-2 col-md-2">
                 <label for="tipo"> Nº </label>
                 <input type="num" class="form-control" name="num" id="num" autocomplete="off" required value="<?=$obEvento->numLocalEvento?>">
+            </div>
+        </div>
+        <div class="mt-4 form-group line">
+            <div>
+                <label>Status</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-control">
+                    <input type="radio" name="status" value="s" checked> Ativo
+                </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="form-control">
+                    <input type="radio" name="status" value="n" <?=$obEvento->flAtivo == 'n' ? 'checked' : ''?> id="tipo"> Inativo
+                </label>
             </div>
         </div>
         <div class="mt-4 form-group">

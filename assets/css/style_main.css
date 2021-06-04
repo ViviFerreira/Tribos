@@ -43,6 +43,10 @@ body{
 .h7 {
 	font-size: 0.8rem;
 }
+.h6{
+	font-size: 0.9rem;
+	float: right;
+}
 .gedf-card{
 	background-color: var(--dark-color);
 	color: white;

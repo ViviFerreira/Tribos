@@ -129,6 +129,10 @@
                     </div>
                     <div class="card-footer">
                       <?=$resultados?>
+                      <?=$evento->flAtivo == 's' ? 
+                      '<span class="h6 text-warning center"><i class="bi bi-emoji-smile"></i> Evento Ativo </span> ' :
+                      '<span class="h6 text-muted center"><i class="bi bi-emoji-frown"></i> Evento Inativo </span> '
+                      ?>
                     </div>
                 </div>
             </div>
