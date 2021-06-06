@@ -8,6 +8,7 @@
   $obGrupoUserLogado = new GruposUsuario;
   $obEventoUserLogado = new EventosUsuario;
   $obUsuariosEvento = new EventosUsuario;
+
   $obGrupo = new Grupo; 
   $obEvento = new Evento;
   $idUsuarioLogado = $_SESSION['idUsuario'];
@@ -36,7 +37,7 @@
   $opcoesUsuarioAdmin = '';
   ?>
   
-  <div class="eventos"> 
+  <div class="eventos mb-5"> 
       <h4 class="title-tribos"><i class="bi bi-calendar2-event"></i> Eventos das minhas tribos</h4>
       <div class="container-fluid gedf-wrapper mb-3">
         <div class="row">
@@ -65,35 +66,21 @@
                                                           : null;
           //Verifica se o evento está lotado 
           $qtPartsEventoSetado = $evento->qtPartsEvento; //qt limite
-          $usuariosEventoSetado = $obUsuariosEvento->getEventosUsuario('idEvento = '.$evento->idEvento); //qt atual
-          $parts = count($usuariosEventoSetado); 
+          $usuariosEventoSetado = $obUsuariosEvento->getEventosUsuario('idEvento = '.$evento->idEvento); 
+          $parts = count($usuariosEventoSetado); //qt atual
+          
           // Se o usuario logado já participa do evento aparece botão para sair, se não para participar (se o evento não estiver lotado) 
           if(!empty($eventoUserLogado)){ 
             $resultados = ' <a href="../pages/sairEvento.php?id='.$evento->idEvento.'" class="btn btn-danger btn-sm">
                               <i class="bi bi-door-closed"></i> Sair
                             </a>';
-          }elseif($parts < $qtPartsEventoSetado){
+          }elseif($parts < $qtPartsEventoSetado && $evento->flAtivo == 's'){
             $resultados = ' <a href="../pages/participarEvento.php?id='.$evento->idEvento.'" class="btn btn-success btn-sm"><i class="bi bi-door-open"></i> 
                                 Participar
-                              </a>';
+                            </a>';
           }else{ 
             $resultados ='<a href="#" class="btn btn-success btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Participar</a>';
           }
-    //GETS
-    unset($_GET['status']);
-    unset($_GET['pagina']);
-    $gets = http_build_query($_GET);
-
-    //PAGINAÇÃO                   
-    $paginacao =  '';
-    $paginas = $obPagination->getPages();
-    foreach ($paginas as $key => $pagina) {
-      $class = $pagina['atual'] ? 'btn-primary' : 'btn-dark';
-      $paginacao .= '<a href="?pagina='.$pagina['pagina'].'&'.$gets.'">
-                        <button type="button" class="btn '.$class.'">'.$pagina['pagina'].'</button>
-                    </a>';
-    }
-
     ?>
       <div class="col-md-4 gedf-main mt-3">
                 <div class="card gedf-card">
@@ -123,9 +110,14 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <span class="card-text">
-                          <?=$evento->descEvento?>
-                        </span>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark">
+                          <span class="card-text">
+                            <?=$evento->descEvento?>
+                          </span>
+                          <span class="badge badge-primary badge-pill"><?=$parts?> participantes </span>
+                        </li>
+                      </ul>
                     </div>
                     <div class="card-footer">
                       <?=$resultados?>
@@ -159,6 +151,4 @@
       </div>' 
                                                                 : null; 
     ?>
-  <section class="ml-3 mt-3 mb-3">
-    <?=$paginacao ?? ''?>
-  </section>
+  </div>

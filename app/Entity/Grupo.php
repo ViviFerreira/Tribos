@@ -71,7 +71,7 @@ class Grupo{
    * @return array
    */
   public function getGrupos($where = null, $and = null, $order = null, $limit = null){
-    return (new Database($this->table))->select($where, $and, $order,$limit)
+    return (new Database($this->table))->select($where, $and, $order, $limit)
                                   ->fetchAll(PDO::FETCH_CLASS,self::class);
   }
 

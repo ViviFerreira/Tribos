@@ -2,7 +2,10 @@
   require_once '../vendor/autoload.php';
   use \App\Entity\Usuario;
   use \App\Entity\GruposUsuario;
+
   $obGrupoUserLogado = new GruposUsuario;
+  $obUsuariosGrupo = new GruposUsuario;
+
   $obUser = new Usuario; 
   $idUsuarioLogado = $_SESSION['idUsuario'];
   $opcoesUsuarioAdmin = '';
@@ -29,7 +32,7 @@
         </div>
 
         <div class="col-md-4 d-flex align-items-end mt-3">
-          <button type="submit" class="btn btn-info"><i class="bi bi-filter"></i> Filtrar</button>
+          <button type="submit" class="btn btn-primary"><i class="bi bi-filter"></i> Filtrar</button>
         </div>
       </div>
     </form>
@@ -54,6 +57,8 @@
                         ' 
                         <a href="../pages/editarTribo.php?id='.$grupo->idGrupo.'" class="dropdown-item"><i class="bi bi-pencil-square"></i> Editar</a>
                         ' : null;
+    $usuariosGrupoSetado = $obUsuariosGrupo->getGruposUsuario('idGrupo = '.$grupo->idGrupo); 
+    $parts = count($usuariosGrupoSetado); //qt atual
 
     // Se o usuario logado já participa da tribo aparece botão para sair, se não para participar (se a tribo não estiver inativa) 
     if(!empty($grupoUserLogado)){ 
@@ -108,7 +113,9 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
                                         <div class="h6 dropdown-header">Mais Opções</div>
-                                        <a class="dropdown-item" href="#"><i class="bi bi-people-fill"></i> Partipantes</a>
+                                        <form method="post">
+                                        </form>
+                                        <a class="dropdown-item" href="participantesGrupo.php?id=<?=$grupo->idGrupo?>" type="submit"><i class="bi bi-people-fill"></i> Partipantes</a>
                                         <?=$opcoesUsuarioAdmin?>
                                     </div>
                                 </div>
@@ -116,13 +123,18 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <span class="card-text">
-                          <?=$grupo->descGrupo?>
-                        </span>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark">
+                          <span class="card-text">
+                            <?=$grupo->descGrupo?>
+                          </span>
+                          <span class="badge badge-primary badge-pill"><?=$parts?> participantes </span>
+                        </li>
+                      </ul>
                     </div>
                     <div class="card-footer">
                       <?=$resultados?>
-                      <?=$grupo->flAtivo == 's' ? 
+                      <?=$statusGrupo == 's' ? 
                       '<span class="h6 text-warning center"><i class="bi bi-emoji-smile"></i> Tribo Ativa </span> ' :
                       '<span class="h6 text-muted center"><i class="bi bi-emoji-frown"></i> Tribo Inativa </span> '
                       ?>

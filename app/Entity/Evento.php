@@ -80,8 +80,8 @@ class Evento{
    * @param  string $limit
    * @return array
    */
-  public function getEventos($where = null, $order = null, $limit = null){
-    return (new Database($this->table))->select($where,$order,$limit)
+  public function getEventos($where = null, $and = null, $order = null, $limit = null){
+    return (new Database($this->table))->select($where, $and, $order, $limit)
                                   ->fetchAll(PDO::FETCH_CLASS,self::class);
   }
 

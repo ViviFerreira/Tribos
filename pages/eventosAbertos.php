@@ -4,8 +4,7 @@
   use \App\Entity\Grupo;
   use \App\Entity\Evento;
   use \App\Entity\Usuario;
-  use \App\Db\Pagination;
-  
+
   $obUser = new Usuario;
   $obGrupo = new Grupo; 
   $obEvento = new Evento; 
@@ -37,15 +36,8 @@
 
   //CLÁUSULA WHERE 
   $where = implode(' AND ',$condicoes);
-  
-  //QUANTIDADE TOTAL DE EVENTOS
-  $qntEventos = $obEvento->getQntEventos($where);
-  
-  //PAGINAÇÃO 
-  $obPagination = new Pagination($qntEventos, $_GET['pagina'] ?? 1, 6);
-  $limit = $obPagination->getLimit();
 
-  $eventos = $obEvento->getEventos($where, null, null, $limit);
+  $eventos = $obEvento->getEventos($where);
   ?>
   <section class="dash">
     <div class="jumbotron dash">

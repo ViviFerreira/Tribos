@@ -85,15 +85,16 @@
                             : null;
                
         //Verifica se o evento está lotado 
-        $qtPartsEventoSetado = $evento->qtPartsEvento; //limite
+        $qtPartsEventoSetado = $evento->qtPartsEvento; // qt limite
         $usuariosEventoSetado = $obUsuariosEvento->getEventosUsuario('idEvento = '.$evento->idEvento); //Atual
-        $parts = count($usuariosEventoSetado);   
+        $parts = count($usuariosEventoSetado); //qt atual
+
         // Se o usuario logado já participa do evento aparece botão para sair, se não para participar (se o evento não estiver lotado) 
         if(!empty($eventoUserLogado)){ 
           $resultados = ' <a href="../pages/sairEvento.php?id='.$evento->idEvento.'" class="btn btn-danger btn-sm">
                             <i class="bi bi-door-closed"></i> Sair
                           </a>';
-        }elseif($parts < $qtPartsEventoSetado){
+        }elseif($parts < $qtPartsEventoSetado && $evento->flAtivo == 's'){
           $resultados = ' <a href="../pages/participarEvento.php?id='.$evento->idEvento.'" class="btn btn-success btn-sm"><i class="bi bi-door-open"></i> 
                               Participar
                             </a>';
@@ -129,9 +130,14 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <span class="card-text">
-                          <?=$evento->descEvento?>
-                        </span>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark">
+                          <span class="card-text">
+                            <?=$evento->descEvento?>
+                          </span>
+                          <span class="badge badge-primary badge-pill"><?=$parts?> participantes </span>
+                        </li>
+                      </ul>
                     </div>
                     <div class="card-footer">
                       <?=$resultados?>
