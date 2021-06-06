@@ -113,22 +113,19 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
                                         <div class="h6 dropdown-header">Mais Opções</div>
-                                        <form method="post">
-                                        </form>
-                                        <a class="dropdown-item" href="participantesGrupo.php?id=<?=$grupo->idGrupo?>" type="submit"><i class="bi bi-people-fill"></i> Partipantes</a>
                                         <?=$opcoesUsuarioAdmin?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body bg-dark">
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center bg-dark">
+                        <li class="list-group-item d-flex justify-content-between align-items-center gedf-card">
                           <span class="card-text">
                             <?=$grupo->descGrupo?>
                           </span>
-                          <span class="badge badge-primary badge-pill"><?=$parts?> participantes </span>
+                          <a href="participantesGrupo.php?id=<?=$grupo->idGrupo?>"><span class="badge badge-primary badge-pill"><i class="bi bi-person-lines-fill"></i> <?=$parts?></span></a>
                         </li>
                       </ul>
                     </div>

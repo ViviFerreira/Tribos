@@ -50,6 +50,7 @@ body{
 .gedf-card{
 	background-color: var(--dark-color);
 	color: white;
+	border: none;
 }
 .dropdown-toggle::after {
 	content: none;
@@ -65,11 +66,24 @@ body{
 	margin-bottom: 2em;
 }
 
+.parts-eventos{
+	margin-top: 4em;
+	margin-bottom: 8em;
+	width: 100%;
+	padding: 2em;
+}
+
 .color-table{
 	background-color: #9df3c4;
 	color: var(--dark-color);
 	font-weight: var(--font-weight-normal);
 }
+
+.parts{
+	width: 50em;
+	margin: 0 auto;
+}
+
 .color-table-bh{
 	background-color: #f9f7f7;
 	color: var(--dark-color);
@@ -128,8 +142,10 @@ body{
 	.new-evento h2{
 		text-align: center;
 	}
-	
 	.line{
+		width: 100%;
+	}
+	.parts{
 		width: 100%;
 	}
 }

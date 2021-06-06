@@ -89,7 +89,7 @@ class Grupo{
 
 
   /**
-   * Método responsável por buscar um usuário no banco de dados
+   * Método responsável por buscar um grupo no banco de dados
    * @param  integer $id
    * @return Grupo
    */
