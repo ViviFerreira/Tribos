@@ -113,6 +113,7 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
                                         <div class="h6 dropdown-header">Mais Opções</div>
+                                        <a href="participantesGrupo.php?id=<?=$grupo->idGrupo?>" class="dropdown-item"><i class="bi bi-person-lines-fill"></i> Participantes</a>
                                         <?=$opcoesUsuarioAdmin?>
                                     </div>
                                 </div>
