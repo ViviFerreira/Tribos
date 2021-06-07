@@ -60,7 +60,7 @@
                                     unir pessoas</h6>
                                 <h1 class="text-white title-main" data-aos="fade-up" data-aos-delay="500">Faça parte!</h1>
 
-                                <a href="front/explorar.php" class="btn custom-btn bordered mt-3" data-aos="fade-up"
+                                <a href="pages/inicio.php" class="btn custom-btn bordered mt-3" data-aos="fade-up"
                                     data-aos-delay="700">Veja mais</a>
                             </div>
                         </section>
