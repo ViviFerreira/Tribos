@@ -33,7 +33,7 @@
                             <a class="nav-link" href="../index.php"><i class="bi bi-house"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/inicio.php"><i class="bi bi-grid-1x2"></i> Inicio</a>
+                            <a class="nav-link" href="../pages/inicio.php"><i class="bi bi-people"></i> Tribos</a>
                         </li>
 
                         <li class="nav-item">
