@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `dbTribos`.`Evento` (
   `qtPartsEvento` INT NOT NULL,
   `flEventoPrivado` ENUM('s', 'n') NULL,
   `localEvento` VARCHAR(200) NOT NULL,
-  `numLocalEvento` INT NOT NULL,
+  `numLocalEvento` VARCHAR(15) NOT NULL,
   `flAtivo` ENUM('s', 'n') NULL DEFAULT 's',
   `idGrupoCriou` INT NOT NULL,
   PRIMARY KEY (`idEvento`),
