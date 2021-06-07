@@ -18,7 +18,7 @@
       </div>
       <input type="submit" value="Acessar" class="btn btn-login">
       <div class="link-log">
-        <span>Ainda não é inscrito? <a href="formCadastro.php" id="link-log">Cadastre-se</a></span>
+        <span>Ainda não é inscrito? <a href="formUsuario.php" id="link-log">Cadastre-se</a></span>
       </div>
     </form>
   </section>
